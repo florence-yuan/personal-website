@@ -1,0 +1,9 @@
+* {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    box-sizing: border-box
+}
