@@ -1,5 +1,5 @@
 ---
-const {platform, username} = Astro.props;
+const {addr, label} = Astro.props;
 ---
 
-<a href={`www.${platform}.com/${username}`}>{platform}</a>
+<a href={addr}>{label ? label : addr}</a>

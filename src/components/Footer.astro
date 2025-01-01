@@ -1,9 +1,11 @@
 ---
-const gmailAddr = 'narcissus.yuan@gmail.com';
+import Social from "./Social.astro";
+
+const gmailAddr = 'mailto:narcissus.yuan@gmail.com';
 const projectsAddr = 'https://github.com/florence-yuan';
 ---
 
 <footer>
-    <p>Contact me at {gmailAddr}</p>
-    <p>Find my projects at {projectsAddr}</p>
+    <p>Contact me at <Social addr={gmailAddr} label="narcissus.yuan@gmail.com"/></p>
+    <p>Find my projects at <Social addr={projectsAddr} /></p>
 </footer>
