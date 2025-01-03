@@ -1,31 +1,15 @@
 ---
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
-import { ClientRouter } from 'astro:transitions';
-import '../styles/index.css';
+import BaseLayout from '../layouts/BaseLayout.astro';
 
 const pageTitle = 'About Me';
 ---
 
-<html lang="en" transition:animate="fade">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Florence Yuan | {pageTitle}</title>
-
-		<ClientRouter />
-	</head>
-	<body>
-		<Header />
-
+<BaseLayout pageTitle={pageTitle}>
+	<section>
 		<h1>{pageTitle}</h1>
-        <p>Just some text</p>
-        <p>Just some text</p>
-        <p>Just some text</p>
-        <p>Will update later!</p>
-
-		<Footer />
-	</body>
-</html>
+		<p>Just some text</p>
+		<p>Just some text</p>
+		<p>Just some text</p>
+		<p>Will update later!</p>
+	</section>
+</BaseLayout>

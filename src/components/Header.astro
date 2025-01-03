@@ -1,15 +1,15 @@
 ---
 import Navigation from "./Navigation.astro";
+import Logo from './Logo.astro'
+import Hamburger from "./Hamburger.astro";
 ---
 
 <header>
     <nav>
-        <Navigation />
+        <Logo />
+        <div class="nav__right">
+            <Hamburger />
+            <Navigation />
+        </div>
     </nav>
 </header>
-
-<style>
-    header {
-        background-color: skyblue;
-    }
-</style>

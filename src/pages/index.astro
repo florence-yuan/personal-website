@@ -1,26 +1,31 @@
 ---
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
-import { ClientRouter } from 'astro:transitions';
-import '../styles/index.css';
+import BaseLayout from "../layouts/BaseLayout.astro";
+import AnimateLine from "../components/utilities/AnimateLine.astro";
 
-const pageTitle = 'Home Page';
+const pageTitle = "Home Page";
 ---
 
-<html lang="en" transition:animate="fade">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Florence Yuan | {pageTitle}</title>
-
-		<ClientRouter />
-	</head>
-	<body>
-		<Header />
-		<h1>{pageTitle}</h1>
+<BaseLayout pageTitle={pageTitle}>
+	<section>
+		<h1 class="section__title">
+			<AnimateLine text='Florence Yuan' />
+		</h1>
 		<p>This is my home page.</p>
-		<Footer />
-	</body>
-</html>
+		<img
+			src='/src/assets/images/hero-image.png'
+			alt="Hero image showing mashup of different artworks"
+			class="section__image hero-img"
+		/>
+	</section>
+	<section>
+		<h1 class="section__title">
+			<AnimateLine text='Florence Yuan' />
+		</h1>
+		<p>This is my home page.</p>
+		<img
+			src='/src/assets/images/hero-image.png'
+			alt="Hero image showing mashup of different artworks"
+			class="section__image hero-img"
+		/>
+	</section>
+</BaseLayout>

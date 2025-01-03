@@ -1,0 +1,19 @@
+.post {
+    width: 90%;
+    max-width: 60rem;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.post__title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.post__img {
+    max-width: 100%;
+}
+
+.post__body {
+    margin-top: 1rem;
+}

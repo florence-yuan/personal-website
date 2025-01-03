@@ -1,0 +1,8 @@
+---
+const {text} = Astro.props;
+const letters = text.split('');
+---
+
+<div class="animate-line">
+    {letters.map((letter: string) => (letter !== ' ' ? <span class="animate-letter">{letter}</span> : <span class="animate-separator" />))}
+</div>
