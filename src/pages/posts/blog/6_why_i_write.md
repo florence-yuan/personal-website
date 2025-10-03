@@ -2,7 +2,7 @@
 layout: ../../../layouts/MarkdownPostLayout.astro
 title: 'Why I Write'
 pubDate: '2025-09-30'
-description: 'What Venus and Frankenstein have to do with us; idolatry and contempt, and an echo chamber of Want that I attempt to escape through writing.'
+description: 'What Venus and Frankenstein have to do with us.  Or, an echo chamber of idolatry and contempt that I attempt to escape through writing.'
 author: 'Florence Yuan'
 
 tags: ["personal", "philosophy", "writing", "reflective essay"]

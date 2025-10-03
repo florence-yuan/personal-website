@@ -2,7 +2,7 @@
 layout: ../../../layouts/MarkdownPostLayout.astro
 title: 'Much Ado About Nothing on Rainy Days'
 pubDate: '2025-05-20'
-description: 'Rainy days '
+description: Rainy days and the romanticization of idleness.
 author: 'Florence Yuan'
 image:
     url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Gustave_Caillebotte_-_Paris_Street%3B_Rainy_Day_-_Google_Art_Project.jpg/1014px-Gustave_Caillebotte_-_Paris_Street%3B_Rainy_Day_-_Google_Art_Project.jpg'
@@ -12,8 +12,6 @@ image:
     domain: 'Public domain, via Wikimedia Commons'
 
 tags: ["personal", "blogging", "philosophy", "rainy days"]
-colors: [300, 340]
-hidden: There is nothing so irritating as a sudden shower on a summer day when, in the middle of travel, storm clouds gather and all the world is drenched in relentless rain. But t
 ---
 
 There seems to be much romance attached to rainy days. Hot days, not so much; but rain appears to inspire, at least in some of us, a liking that goes decidedly contrary to the well-honed modern day pragmatism. In books, in movies, in idle daydreams, there is nothing so charming as a spring drizzle when there is nothing to be done in the cafe or the apartment, and all the world could weep for the warm insulation of the roof and that gentle superiority of the person within, who sits at his desk nursing a cup of coffee and surveys his rain-splashed window with mild contentment.

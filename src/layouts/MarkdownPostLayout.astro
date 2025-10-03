@@ -8,9 +8,9 @@ const {frontmatter, hideTitle} = Astro.props;
 <BaseLayout>
     <article class="post">
         <header class="post__header">
-            {!hideTitle && <h1 class="post__title">{frontmatter.title}</h1>}
-            <p class="post__author">By {frontmatter.author}</p>
             <p class="post__pubDate">Published on {frontmatter.pubDate}</p>
+            {!hideTitle && <h1 class="post__title">{frontmatter.title}</h1>}
+            <!-- <p class="post__author">By {frontmatter.author}</p> -->
             <p class="post__description">{frontmatter.description}</p>
         </header>
         {frontmatter.image && <figure class="post__img-wrapper">
@@ -32,7 +32,7 @@ const {frontmatter, hideTitle} = Astro.props;
             <div class="tags">
                 <div class="tags__label">Tags: </div>
                 {frontmatter.tags.map((tag : string) => (
-                    <a class="tag" href={`/tags/${tag}`}>
+                    <a class="tag link--no-underline" href={`/tags/${tag}`}>
                         {tag}
                     </a>
                 ))}

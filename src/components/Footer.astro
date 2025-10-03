@@ -1,28 +1,26 @@
 ---
 import Social from "./utilities/Social.astro";
 
-const gmailAddr = 'mailto:narcissus.yuan@gmail.com';
 const projectsAddr = 'https://github.com/florence-yuan';
 
 const linksAttrs = [
-    { href: '/', label: 'Home' },
-    { href: '/about/', label: 'About' },
-    { href: '/blog/', label: 'Blog' },
-    { href: '/fiction/', label: 'Fiction' }
+    { href: "/", label: "Home" },
+    { href: "/about/", label: "Writings" },
+    { href: "/blog/", label: "Tech" },
+    { href: "/fiction/", label: "Curios" },
 ];
 
 ---
 
 <footer class="footer">
-    <div class="footer__left">
+    <div class="footer__sitemap">
         {linksAttrs.map(({href, label}) => (
-            <a href={href} class="footer__link">
+            <a href={href} class="footer__link link--no-underline">
                 {label}
             </a>
         ))}
     </div>
-    <div class="footer__right">
-        <p>Contact me at <Social addr={gmailAddr} label="narcissus.yuan@gmail.com"/></p>
+    <div class="footer__socials">
         <p>Find my projects at <Social addr={projectsAddr} /></p>
     </div>
 </footer>

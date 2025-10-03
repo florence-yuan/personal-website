@@ -15,5 +15,4 @@ tags: ["personal", "blogging", "intro"]
 colors: [20, 50]
 ---
 
-Welcome to my blog!  I'm a... Here, I will share...
-To learn more about me, visit [my About Page](/about/)
+Welcome to my blog!  I'm a writer and developer with an interest in surrealism and music.

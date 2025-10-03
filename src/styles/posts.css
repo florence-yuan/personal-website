@@ -1,4 +1,5 @@
-.posts-section {
+body {
+    background-color: #f8f7fc;
 }
 
 .post {
@@ -16,9 +17,9 @@
 
 .post__title {
     font-size: 5rem;
-    font-weight: 500;
+    font-weight: bold;
     margin-bottom: 1rem;
-    line-height: 1;
+    line-height: 0.9;
 }
 
 .post__img-wrapper {
@@ -45,13 +46,24 @@
 
 .post__body {
     margin-bottom: 3rem;
+    column-width: 18rem;
+    column-gap: 0.5in;
+    text-align: justify;
     line-height: 2;
 }
 
+.post__pubDate {
+    font-weight: bold;
+    margin-bottom: 3rem;
+}
+
 .post__description {
-    margin-top: 1.5em;
-    color: var(--text-color2);
-    font-style: italic;
+    margin: 0 0 3.5em;
+    /* color: var(--text-color2);
+    font-style: italic; */
+    font-family: 'Bauhaus Bold';
+    font-size: 1.2rem;
+    line-height: 1.4;
 }
 
 /* .post__body > p:first-child::first-letter {
@@ -67,13 +79,13 @@
     font-size: 4rem;
     line-height: 1;
     float: left;
-    font-family: 'Literata', serif;
-    font-weight: bold;
+    font-family: 'Bauhaus Regular';
     margin-right: 0.1em;
 }
 
 .post__body > p + p {
     margin-top: 0.8em;
+    text-indent: 0.5in;
 }
 
 /* Tags Styles */

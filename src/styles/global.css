@@ -57,14 +57,21 @@
     font-family: 'Bauhaus Regular';
     font-style: normal;
     font-weight: normal;
-    src: local('Bauhaus Regular'), url('BauhausRegular.woff') format('woff');
+    src: local('Bauhaus Regular'), url('../assets/fonts/BauhausRegular.woff') format('woff');
 }
 
 @font-face {
     font-family: 'Bauhaus Bold';
     font-style: normal;
     font-weight: normal;
-    src: local('Bauhaus Bold'), url('BauhausBold.woff') format('woff');
+    src: local('Bauhaus Bold'), url('../assets/fonts/BauhausBold.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Graphik Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Graphik Regular'), url('../assets/fonts/Graphik.woff2') format('woff2');
 }
 
 body {
@@ -72,7 +79,7 @@ body {
     /* --bg-color: var(--light-beige1); */
 
     background-color: var(--bg-color);
-    font-family: "Roboto", sans-serif;
+    font-family: 'Graphik Regular';
     letter-spacing: 0.01rem;
     line-height: 1.6;
 }
@@ -92,13 +99,20 @@ main {
 }
 
 .footer {
-    /* display: flex;
-    justify-content: space-around; */
-    margin: 2rem auto 0;
-    margin-top: 2rem;
-    padding: 5rem calc(3rem + 3vw) 6rem;
-    border-top: 1px solid var(--dark-blue);
-    color: var(--dark-blue);
+    margin: 6rem auto 0;
+    padding: 3rem calc(3rem + 3vw) 4rem;
+    border-top: 10px solid var(--text-color);
+}
+
+.footer__sitemap {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 1rem;
+}
+
+.footer__link {
+    font-size: 1.5rem;
+    font-family: 'Bauhaus Regular';
 }
 
 .link--btn {
@@ -131,18 +145,6 @@ main {
     filter: invert(1);
 }
 
-/* .footer__link {
-    display: block;
-}
-
-.footer__link + .footer__link {
-    margin-top: 2rem;
-} */
-
-.footer__link {
-    font-size: 1.5rem;
-}
-
 .link--social {
     font-family: 'Inter', sans-serif;
     font-weight: normal;
@@ -173,6 +175,13 @@ article h1 {
     font-size: 3rem;
     text-transform: lowercase;
     letter-spacing: 0.1rem;
+    margin-bottom: 1rem;
+}
+
+.article__desc {
+    font-family: 'Bauhaus Regular';
+    font-weight: bold;
+    font-size: 1.3rem;
     margin-bottom: 2rem;
 }
 
@@ -323,8 +332,7 @@ nav {
 }
 
 .nav__bar {
-    margin: 1rem 2rem;
-    padding: 1rem 3rem 1rem 1rem;
+    padding: 2rem 5rem 1rem 4rem;
 }
 
 .nav__inner {
@@ -360,8 +368,8 @@ nav {
 
 .nav__btn-title {
     text-transform: uppercase;
-    font-family: 'Inter', sans-serif;
-    font-size: 0.9rem;
+    font-family: 'Graphik Regular';
+    font-weight: bold;
     letter-spacing: 0.02rem;
 }
 
@@ -444,8 +452,9 @@ nav.expanded .nav-links {
 
 .nav__link {
     display: block;
-    font-size: 3rem;
-    font-family: 'Literata', serif;
+    font-size: 4rem;
+    font-family: 'Bauhaus Regular', serif;
+    letter-spacing: 0.1rem;
     text-transform: capitalize;
     color: inherit;
     line-height: 1.35;

@@ -2,9 +2,9 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-   width="357.77386mm"
-   height="207.06577mm"
-   viewBox="0 0 357.77386 207.06577"
+   width="362.71265mm"
+   height="212.23502mm"
+   viewBox="0 0 362.71265 212.23502"
    version="1.1"
    id="svg1"
    inkscape:version="1.4.2 (ebf0e940d0, 2025-05-08)"
@@ -24,14 +24,14 @@
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="mm"
      inkscape:zoom="0.45254834"
-     inkscape:cx="851.8427"
-     inkscape:cy="439.73203"
+     inkscape:cx="688.32426"
+     inkscape:cy="391.11844"
      inkscape:window-width="1704"
      inkscape:window-height="999"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="1"
-     inkscape:current-layer="g1" />
+     inkscape:current-layer="svg_coder" />
   <defs
      id="defs1">
     <rect
@@ -310,7 +310,7 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(-41.057341,-18.714988)">
+     transform="translate(-46.52399,-13.545738)">
     <g
        id="svg_writer"
        transform="translate(4.7625002)">
@@ -417,16 +417,16 @@
          y="40.475121" />
       <text
          xml:space="preserve"
-         style="font-weight:600;font-size:22.5778px;font-family:'URW Gothic';-inkscape-font-specification:'URW Gothic Semi-Bold';text-align:start;letter-spacing:2.64583px;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round"
+         style="font-weight:600;font-size:25.4px;font-family:'URW Gothic';-inkscape-font-specification:'URW Gothic Semi-Bold';text-align:start;letter-spacing:2.64583px;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round"
          x="294.94931"
-         y="34.317341"
+         y="31.142338"
          id="text1-9-3"
          inkscape:label="text1-9-3"><tspan
            sodipodi:role="line"
            id="tspan1-2-6"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5778px;font-family:Bauhaus;-inkscape-font-specification:Bauhaus;letter-spacing:2.64583px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.5"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:25.4px;font-family:Bauhaus;-inkscape-font-specification:Bauhaus;letter-spacing:2.64583px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.5"
            x="294.94931"
-           y="34.317341">WRITING</tspan></text>
+           y="31.142338">WRITING</tspan></text>
       <path
          style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:2.569;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
          d="m 336.7596,63.727078 c 0,0 17.53957,8.185129 21.63212,22.216779 4.09258,14.03165 16.95492,19.293523 16.95492,19.293523"
@@ -527,30 +527,32 @@
          r="1.6845778" />
       <g
          id="g1"
-         transform="translate(5.2916667,-24.870833)">
+         transform="translate(5.2916667,-28.045835)">
         <text
            xml:space="preserve"
-           style="font-weight:600;font-size:22.5778px;font-family:'URW Gothic';-inkscape-font-specification:'URW Gothic Semi-Bold';text-align:start;letter-spacing:2.64583px;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:none;stroke:#000000;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round"
+           style="font-weight:600;font-size:25.4px;font-family:'URW Gothic';-inkscape-font-specification:'URW Gothic Semi-Bold';text-align:start;letter-spacing:2.64583px;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:none;stroke:#000000;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round"
            x="120.88036"
            y="59.283833"
            id="text1"><tspan
              sodipodi:role="line"
              id="tspan1"
-             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5778px;font-family:Bauhaus;-inkscape-font-specification:Bauhaus;letter-spacing:2.64583px;fill:#000000;stroke:none;stroke-width:1.5"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:25.4px;font-family:Bauhaus;-inkscape-font-specification:Bauhaus;letter-spacing:2.64583px;fill:#000000;stroke:none;stroke-width:1.5"
              x="120.88036"
              y="59.283833">TECH</tspan></text>
         <text
            xml:space="preserve"
            style="font-weight:600;font-size:22.5778px;font-family:'URW Gothic';-inkscape-font-specification:'URW Gothic Semi-Bold';text-align:start;letter-spacing:2.64583px;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:none;stroke:#000000;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round"
-           x="34.365845"
+           x="39.657516"
            y="58.64521"
            id="text1-8"><tspan
              sodipodi:role="line"
              id="tspan1-1"
              style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5778px;font-family:Bauhaus;-inkscape-font-specification:Bauhaus;letter-spacing:2.64583px;fill:#000000;stroke:none;stroke-width:1.5"
-             x="34.365845"
-             y="58.64521">DEV  <tspan
-   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:19.7556px;font-family:sans-serif;-inkscape-font-specification:sans-serif"
+             x="39.657516"
+             y="58.64521"><tspan
+   style="font-size:25.4px"
+   id="tspan21">DEV</tspan> <tspan
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5778px;font-family:sans-serif;-inkscape-font-specification:sans-serif"
    id="tspan20">/</tspan></tspan></text>
       </g>
       <path
@@ -656,18 +658,18 @@
          transform="translate(21.77197,1.0145563)" />
       <text
          xml:space="preserve"
-         style="font-weight:600;font-size:22.5778px;line-height:1;font-family:'URW Gothic';-inkscape-font-specification:'URW Gothic Semi-Bold';text-align:start;letter-spacing:2.64583px;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:none;stroke:#000000;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round"
-         x="232.6474"
+         style="font-weight:600;font-size:25.4px;line-height:1;font-family:'URW Gothic';-inkscape-font-specification:'URW Gothic Semi-Bold';text-align:start;letter-spacing:2.64583px;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:none;stroke:#000000;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round"
+         x="231.58908"
          y="141.39851"
          id="text1-9"><tspan
            sodipodi:role="line"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5778px;line-height:1;font-family:Bauhaus;-inkscape-font-specification:Bauhaus;letter-spacing:2.64583px;fill:#000000;stroke:none;stroke-width:1.5"
-           x="232.6474"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:25.4px;line-height:1;font-family:Bauhaus;-inkscape-font-specification:Bauhaus;letter-spacing:2.64583px;fill:#000000;stroke:none;stroke-width:1.5"
+           x="231.58908"
            y="141.39851"
            id="tspan3">ART</tspan></text>
       <path
-         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:4;stroke-linecap:square;stroke-linejoin:round;stroke-dasharray:none"
-         d="M 283.53382,146.04654 V 20.766499"
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:4.08059;stroke-linecap:square;stroke-linejoin:round;stroke-dasharray:none"
+         d="M 283.53382,145.96514 V 15.586033"
          id="path2-0"
          sodipodi:nodetypes="cc" />
       <path
