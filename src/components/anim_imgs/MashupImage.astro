@@ -1,0 +1,86 @@
+---
+const divideX = 50.5; // from left
+const divideY = 42; // from top
+
+const clipPathTopLeft = `inset(0 ${100 - divideX}% ${100 - divideY}% 0)`;
+const clipPathTopRight = `inset(0 0 ${100 - divideY}% ${divideX}%)`;
+const clipPathBottomLeft = `inset(${divideY}% ${100 - divideX}% 0 0)`;
+const clipPathBottomRight = `inset(${divideY}% 0 0 ${divideX}%)`;
+const clipPathLeft = `inset(0 ${100 - divideX}% 0 0)`;
+const clipPathRight = `inset(0 0 0 ${divideX})`;
+const clipPathNone = `inset(100%)`;
+const clipPathAll = `inset(0)`;
+
+const animationDur = 1;
+---
+
+<div class="img-mashup">
+    <div class="img__part img__part1"></div>
+    <div class="img__part img__part2"></div>
+    <div class="img__part img__part3"></div>
+    <div class="img__part img__part4"></div>
+</div>
+
+<style
+    define:vars={{
+        clipPathTopLeft,
+        clipPathTopRight,
+        clipPathBottomLeft,
+        clipPathBottomRight,
+        clipPathLeft,
+        clipPathRight,
+        clipPathNone,
+        clipPathAll
+    }}
+>
+    @keyframes mashup {
+        0% {
+            clip-path: var(--clipPathTopLeft);
+        }
+        12.5% {
+            clip-path: var(--clipPathBottomLeft);
+        }
+        25% {
+            clip-path: var(--clipPathTopRight);
+        }
+        37.5% {
+            clip-path: var(--clipPathBottomRight);
+        }
+        50% {
+            clip-path: var(--clipPathLeft);
+        }
+        62.5% {
+            clip-path: var(--clipPathRight);
+        }
+        75% {
+            clip-path: var(--clipPathNone);
+        }
+        87.5% {
+            clip-path: var(--clipPathAll);
+        }
+    }
+
+    .img__part1 {
+        background-image: url(../assets/images/artwork1.png);
+        clip-path: var(--clipPathNone);
+        animation-delay: 0s;
+    }
+
+    .img__part2 {
+        background-image: url(../assets/images/artwork2.png);
+        clip-path: var(--clipPathNone);
+        animation-delay: 1.5s;
+    }
+
+    .img__part3 {
+        background-image: url(../assets/images/artwork3.png);
+        clip-path: var(--clipPathNone);
+        animation-delay: 3s;
+    }
+
+    .img__part4 {
+        background-image: url(../assets/images/artwork3.png);
+        clip-path: var(--clipPathAll);
+        animation-delay: 4.5s;
+    }
+</style>

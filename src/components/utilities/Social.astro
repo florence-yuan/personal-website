@@ -1,0 +1,5 @@
+---
+const {addr, label} = Astro.props;
+---
+
+<a href={addr} class="link link--social link--underline">{label ? label : addr}</a>

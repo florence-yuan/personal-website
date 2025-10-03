@@ -1,0 +1,28 @@
+---
+import PostTextCard from "../utilities/PostTextCard.astro";
+import * as featuredPost1 from '../../pages/posts/blog/1_introduction.md';
+import * as featuredPost2 from '../../pages/posts/blog/2_curse_of_the_opening_line.md';
+import * as featuredPost3 from '../../pages/posts/blog/3_neo_brutalist_china.md';
+import * as featuredPost4 from '../../pages/posts/blog/4_much_ado_about_nothing_rainy_days.md';
+import * as featuredPost5 from '../../pages/posts/blog/5_thoughts_on_distractions.md';
+
+const featuredLinks = [
+    featuredPost1,
+    featuredPost2,
+    featuredPost3,
+    featuredPost4,
+    featuredPost5
+];
+---
+
+<div class="featured-posts">
+    {featuredLinks.map(post => {
+        return <PostTextCard
+            url={post.url}
+            frontmatter={post.frontmatter}
+            category="blog"
+            appendClass="home-featured-post"
+        />
+    })}
+    <a href="#" class="link--no-underline link--btn">More posts</a>
+</div>

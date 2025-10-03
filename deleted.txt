@@ -1,0 +1,164 @@
+index CSS
+
+.section--static {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    padding: 5rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 3rem;
+}
+
+@media screen and (min-width: 636px) {
+    .section--static {
+        max-width: 50rem;
+        left: auto;
+        right: 0;
+        height: 100vh;
+        padding-top: 0;
+        padding-left: 0;
+        justify-content: center;
+    }
+}
+
+@media screen and (min-width: 1234px) {
+    .section--static {
+        right: 10vw;
+    }
+}
+
+.img-mashup {
+    position: relative;
+    width: 700px;
+    aspect-ratio: 1;
+    background-size: contain;
+    transform: scaleX(-1);
+}
+
+.img__part {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: top center;
+    /* animation-fill-mode: both; */
+    /* animation-name: mashup; */
+    animation-duration: 6s;
+    animation-iteration-count: 5;
+    animation-timing-function: steps(1);
+    animation-play-state: paused;
+}
+
+.img__part:not(.img__part4) {
+    clip-path: inset(100%);
+}
+
+.hero-section .section__title {
+    font-size: 2rem;
+    line-height: 1;
+}
+
+Featured
+
+
+.home-featured-post + .home-featured-post {
+    margin-top: 4rem;
+}
+
+@media screen and (min-width: 1024px) {
+    .home-featured-post {
+        position: relative;
+        max-width: 30rem;
+    }
+}
+
+@media screen and (min-width: 1360px) {
+    .home-featured-post + .home-featured-post {
+        margin-top: 6rem;
+    }
+
+    .home-featured-post:nth-child(1) {
+        left: 17%;
+    }
+
+    .home-featured-post:nth-child(2) {
+        left: 0%;
+    }
+
+    .home-featured-post:nth-child(3) {
+        left: 10%;
+    }
+}
+
+Animations
+
+
+
+    const figure = document.querySelector('.moving-figure');
+
+    let prevProgress = 0, prevFrameCount = 0;
+    const bgFrameCnt = 2;
+    const figureFrames = {
+        frameCount: 0
+    };
+
+    gsap.to(figureFrames, {
+        scrollTrigger: {
+            scrub: 0.5,
+            start: '30% center',
+            // frameCount: figureFrames.frameCount + 1,
+            onUpdate: self => {
+                if (Math.abs(self.progress - prevProgress) < 0.1 && self.progress !== 0)
+                    return;
+
+                figureFrames.frameCount = Math.min(bgFrameCnt - 1, Math.ceil(self.progress * bgFrameCnt));
+                if (figureFrames.frameCount === prevFrameCount)
+                    return;
+
+                gsap.set(figure, { backgroundPositionY: `${100 * figureFrames.frameCount}%`});
+                
+                prevProgress = self.progress;
+                prevFrameCount = figureFrames.frameCount;
+            }
+        },
+        ease: 'none',
+    });
+
+    gsap.fromTo('.hero-section .section__heading',
+        {
+            opacity: 1,
+        },
+        {
+            scrollTrigger: {
+                start: 'center center',
+                end: 'bottom',
+                trigger: '.hero-section .section__heading',
+                scrub: 0.5,
+            },
+            opacity: 0
+        }
+    );
+
+    const introHeadings = document.querySelectorAll('.intro__heading');
+    introHeadings.forEach(heading => {
+        gsap.fromTo(heading,
+            { opacity: 0, scale: 0.95, y: 20 },
+            {
+                scrollTrigger: {
+                    trigger: heading,
+                    start: "center center",
+                },
+                opacity: 1,
+                scale: 1,
+                y: 0
+            }
+        )
+    });

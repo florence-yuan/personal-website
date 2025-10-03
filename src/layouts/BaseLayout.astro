@@ -4,7 +4,7 @@ import Footer from "../components/Footer.astro";
 import "../styles/global.css";
 import "../styles/index.css";
 
-const { pageTitle } = Astro.props;
+const { pageTitle, hasBg } = Astro.props;
 ---
 
 <html lang="en" transition:animate="fade">
@@ -14,22 +14,22 @@ const { pageTitle } = Astro.props;
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link
-			href="https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100..900;1,100..900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap"
+			href="https://fonts.googleapis.com/css2?family=Domine:wght@400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Literata:ital,opsz,wght@0,7..72,200..900;1,7..72,200..900&family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
 			rel="stylesheet"
 		/>
-
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
 		<title>Florence Yuan | {pageTitle}</title>
 	</head>
-	<body>
+	<body class={hasBg ? "has-bg" : ""}>
 		<Header />
-		<slot />
+		<main>
+			<slot />
+		</main>
 		<Footer />
 
 		<script>
 			import "../scripts/menu.js";
-			import "../scripts/animation.js";
 		</script>
 	</body>
 </html>

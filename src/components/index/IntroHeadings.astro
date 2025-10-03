@@ -1,0 +1,23 @@
+---
+import TwoLineHeading from "../utilities/TwoLineHeading.astro";
+
+const headings = [
+    { title: "Site Design", name: "Florence Yuan" },
+	{ title: "Aesthetic", name: "Modernist" },
+	{ title: "Content", name: "Fiction +WebDev" },
+    { title: "Philosophy", name: "Just a Human", noBreak: true },
+    { title: "Idea", name: "Intimate Solitude", noBreak: true }
+];
+---
+
+<div class="intro-headings">
+    {headings.map(({title, name, noBreak}) => (
+        <TwoLineHeading
+            title={title}
+            name={name}
+            noBreak={noBreak}
+            appendClass="intro__heading"
+            animated={false}
+        />
+    ))}
+</div>

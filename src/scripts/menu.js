@@ -1,8 +1,7 @@
-document.addEventListener('astro:page-load', () => {
-    const hamburger = document.querySelector('.hamburger');
-    const nav = document.querySelector('nav');
-    hamburger.addEventListener('click', () => {
-        console.log('click!')
-        nav.classList.toggle('expanded');
-    });
-})
+const navBtn = document.querySelector('.nav__btn');
+const nav = document.querySelector('nav');
+navBtn.addEventListener('click', () => {
+    console.log('click!')
+    nav.classList.toggle('expanded');
+    document.body.classList.toggle('no-scroll');
+});

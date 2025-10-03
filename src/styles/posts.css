@@ -1,19 +1,124 @@
+.posts-section {
+}
+
 .post {
-    width: 90%;
-    max-width: 60rem;
+    max-width: 90%;
+    width: 60rem;
+    margin: 6rem auto 0;
+    padding: 2rem 1rem;
+}
+
+.post__header, .post__body, .post__footer {
+    width: 50rem;
+    max-width: 100%;
     margin: 0 auto;
-    padding: 1rem;
 }
 
 .post__title {
-    font-size: 2rem;
+    font-size: 5rem;
+    font-weight: 500;
     margin-bottom: 1rem;
+    line-height: 1;
+}
+
+.post__img-wrapper {
+    width: 100%;
+    margin: 2rem auto 3rem;
 }
 
 .post__img {
-    max-width: 100%;
+    width: 100%;
+    max-height: 40rem;
+    object-fit: cover;
+    user-select: none;
+}
+
+.post__img-attr {
+    color: var(--text-color3);
+    font-size: 0.8rem;
+    text-align: right;
+}
+
+.post__img-attr > a {
+    color: inherit;
 }
 
 .post__body {
-    margin-top: 1rem;
+    margin-bottom: 3rem;
+    line-height: 2;
+}
+
+.post__description {
+    margin-top: 1.5em;
+    color: var(--text-color2);
+    font-style: italic;
+}
+
+/* .post__body > p:first-child::first-letter {
+    float: left;
+    color: var(--dark-red);
+    font-size: 5rem;
+    font-weight: bold;
+    font-family: 'Merriweather', serif;
+    margin: 0.3rem 0.5rem 0.5rem;
+} */
+
+.post__body > p:first-child::first-letter {
+    font-size: 4rem;
+    line-height: 1;
+    float: left;
+    font-family: 'Literata', serif;
+    font-weight: bold;
+    margin-right: 0.1em;
+}
+
+.post__body > p + p {
+    margin-top: 0.8em;
+}
+
+/* Tags Styles */
+
+.post .tags {
+    margin-top: 2em;
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.7rem;
+    align-items: center;
+    padding: 1em 0;
+}
+
+.tags__label {}
+
+.tag {
+    text-transform: capitalize;
+    /* font-weight: bold;
+    font-family: "Antic Didone", serif; */
+    color: var(--dark-gray);
+    padding: 0.3em 0.8em 0.35em;
+    font-size: 0.9rem;
+    border: 1px solid var(--light-beige2);
+    border-radius: 30px;
+    transition: all 0.2s ease-in-out;
+}
+
+.tag::before {
+    content: '#';
+}
+
+.tag:hover {
+    background-color: var(--light-beige2);
+}
+
+/* Poem */
+
+.poem {
+    text-align: center;
+    line-height: 1.6;
+}
+
+.poem h1 {
+    font-size: 1.5rem;
 }

@@ -1,31 +1,84 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import type { SvgComponent } from "astro/types";
+import HeroImage from "./../assets/images/drawing.svg?raw";
+import Image from "astro/components/Image.astro";
 import AnimateLine from "../components/utilities/AnimateLine.astro";
 
+import FeaturedPosts from "../components/index/FeaturedPosts.astro";
+import FeaturedProjects from "../components/index/FeaturedProjects.astro";
+
 const pageTitle = "Home Page";
+
+const interests = ["writing", "coding", "art", "music", "research"];
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-	<section>
-		<h1 class="section__title">
-			<AnimateLine text='Florence Yuan' />
-		</h1>
-		<p>This is my home page.</p>
-		<img
-			src='/src/assets/images/hero-image.png'
-			alt="Hero image showing mashup of different artworks"
-			class="section__image hero-img"
-		/>
+	<section class="hero-section section--full">
+		<div class="hero__landing">
+			<div class="landing__desc">
+				<p>
+					Hello and welcome! 
+					I'm Florence, a student perpetually curious about the phenomenon of absolute honesty.
+					Most of the time, I'm busy making fiction and virtual projects. Occasionally
+					I find time to reflect, and to be sidetracked by things like surrealism, dreams,
+					and avant-garde art.
+				</p>
+				<p>
+					Click on the sections on the right to see more!
+				</p>
+			</div>
+			<div class="hero__fig">
+				<Fragment set:html={HeroImage} />
+			</div>
+		</div>
+		<svg class="hero__overlay">
+			<rect id="overlay__rect" width="2000" height="1000" fill="#ffffff" />
+			<rect id="overlay__rect2" width="2000" height="1000" fill="#ffffff" />
+		</svg>
+		<div class="hero__left">
+			<h1 class="hero__heading">
+				CONTRE
+			</h1>
+			<!-- <div class="hero__fig"></div> -->
+			<div class="hero__desc">Some excerpts:<br/>
+
+				Somewhat contrary, but only to myself.
+				Winged teetoms spinning in a summer breeze, dreaming of flight
+			</div>
+			<!-- <div class="hero__band">
+				<div class="hero__block" />
+				<div class="hero__block" />
+				<div class="hero__block" />
+			</div> -->
+			<div class="hero__text">
+				this person very irritating? Yes, oh yes - to us plebeians who huddle under umbrellas in the vain hope that they will shield us from the wrath of god, poor little umbrellas making angry arcs of red and green that shudder impotently in the great moving mass of the morning herd.  Oh, the interminable cold gray sludge that pours from the heavens!  Oh, the despicable little man who sits behind that lighted window up high, his entire demeanor represented by the smug, opaque gleam of gold-rimmed spectacles!
+
+But then the little man twinkles - he _glows_, for a second - he flickers between the layers of consciousness, the enigmatic light that hovers in porous sheets of glass... He is no longer there - he is a fairytale! He is I, and I am He, and after all I have been daydreaming as He and He has been dreaming as I, and the great streams of traffic have long since disappeared for him into other streams, into other worlds...
+
+Just a couple of weeks ago, I was vacationing at a mountain resort in southern China. There was nothing about the mountains that could be called spectacular - in height they were lacking, and in terms of the stone formations they were not peculiarly striking. The moment I stepped off the bus, it was the air that arrested me - or more precisely, the atmosphere. It was like a thin sheet of mist had flown from the folds of my cloak and into a great, shapeless mass of humidity, drawing portentous veils all over the flat, low roofs of the buildings that huddled humbly beneath the underbelly of the sky. Not much of the mountains could be seen - they were all enveloped in the heavy fog. But what could be seen were like wet flecks of color, gleaming behind the moist, taffeta-like clouds with a sly elusion that used to delight the poets.
+			</div>
+		</div>
+		<div class="hero__right">
+			<FeaturedPosts />
+		</div>
 	</section>
-	<section>
-		<h1 class="section__title">
-			<AnimateLine text='Florence Yuan' />
-		</h1>
-		<p>This is my home page.</p>
-		<img
-			src='/src/assets/images/hero-image.png'
-			alt="Hero image showing mashup of different artworks"
-			class="section__image hero-img"
-		/>
+	<section class="section2 section--side">
+		<!-- <h1 class="section__title">
+				Recent posts
+			</h1> -->
+	</section>
+	<section class="section3 intro-section section--side">
+		<h1 class="section__title">Art & Music & Coding</h1>
+		<div class="intro__inner">
+			<FeaturedProjects />
+		</div>
+	</section>
+	<section class="project-section section--side">
+		<h1 class="section__title">Section 4</h1>
 	</section>
 </BaseLayout>
+
+<script>
+	import "../scripts/animation.js";
+</script>

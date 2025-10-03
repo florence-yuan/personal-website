@@ -1,0 +1,320 @@
+.index-flex {
+    width: 100vw;
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    justify-content: space-evenly;
+}
+
+.index-content {
+    max-width: 100%;
+}
+
+.hero-section {
+    /* display: flex;
+    justify-content: center; */
+    /* gap: 5rem; */
+    width: 100%;
+    padding: 2rem 0;
+
+}
+
+.hero__landing {
+    width: max-content;
+    margin: 4rem auto;
+    display: flex;
+    gap: 5rem;
+}
+
+.landing__desc {
+    max-width: 25rem;
+    font-weight: 500;
+    text-align: justify;
+}
+
+.landing__desc > p + p {
+    margin-top: 1em;
+}
+
+.hero__fig {
+    position: relative;
+    max-width: 50rem;
+    width: max-content;
+    padding-right: 2rem;
+    aspect-ratio: 2 / 1;
+}
+
+/* .hero__fig::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(../assets/images/newspaper3.avif);
+    filter: opacity(0.5) brightness(1.25);
+    z-index: -1;
+} */
+
+.hero__overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 100;
+    pointer-events: none;
+}
+
+#overlay__rect {
+    width: 100vw !important;
+    height: 100vh !important;
+}
+
+.hero__fig > svg {
+    width: max-content;
+    height: max-content;
+    max-width: 100%;
+}
+
+.hero__fig > svg #layer1 > g {
+    transition: all 0.25s ease-in-out;
+}
+
+.hero__fig > svg #layer1 > g:hover {
+    opacity: 0.6;
+}
+
+.hero__desc {
+    margin: 0 auto;
+    max-width: 40rem;
+    font-weight: 500;
+}
+
+.hero__band {
+    margin: 5rem 0 0 2rem;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.hero__block {
+    position: relative;
+    display: block;
+    width: 10rem;
+    height: 10rem;
+    background-color: rgb(182, 214, 245);
+    background-image: url(../assets/images/res/daisies.jpg), url(../assets/images/noise.svg);
+    background-size: cover, 10%;
+    background-position: center;
+    background-blend-mode: overlay;
+    /* background-color: #acece6; */
+}
+
+.hero__block:nth-child(2) {
+    top: 1.5rem;
+    /* background-color: rgb(230, 173, 120); */
+}
+
+.hero__block:nth-child(3) {
+    top: -1.5rem;
+}
+
+.hero__text {
+    opacity: 0.5;
+    max-width: 25rem;
+    text-align: justify;
+    margin: 0 auto;
+}
+
+.hero__left {
+    border-right: 1px solid;
+    /* max-width: 40rem; */
+}
+
+.hero__heading {
+    /* font-family: 'Josefin Sans', serif; */
+    font-size: 10rem;
+    font-weight: 500;
+    line-height: 1.1;
+    text-align: justify;
+}
+
+.hero__content {
+    margin: 3rem;
+    height: 80%;
+}
+
+.left-bar {
+    position: sticky;
+    top: 0;
+    display: flex;
+    gap: 2vw;
+    justify-content: right;
+    width: max-content;
+    height: 80vh;
+    padding: 6rem 0 0 calc(3rem + 3vw);
+    z-index: 10;
+}
+
+@media (max-width: 1000px) {
+    .left-bar {
+        gap: 0rem;
+        padding-left: 3rem;
+    }
+}
+
+.hero__intro {
+    max-width: 50rem;
+    font-family: 'Literata', serif;
+    margin-bottom: 3rem;
+    column-width: 20rem;
+    column-gap: 4rem;
+    text-align: justify;
+    line-height: 1.8;
+}
+
+.hero__intro > p + p {
+    margin-top: 0.5em;
+}
+
+.hero__title {
+    margin: 1rem 0;
+    line-height: 1;
+    font-size: 6rem;
+    font-weight: 600;
+    font-family: 'Literata', sans-serif;
+    text-transform: uppercase;
+}
+
+.content__index {
+    width: max-content;
+    writing-mode: sideways-lr;
+    text-align: right;
+    font-family: 'Domine', serif;
+    font-weight: 500;
+    font-size: 2rem;
+}
+
+.flex-content {
+    display: flex;
+    height: 100%;
+}
+
+.content__col {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 0 calc(1rem + 1vw);
+    overflow-x: hidden;
+    transition: all 0.3s ease-in-out;
+}
+
+.content__heading {
+    font-family: 'Domine', serif;
+}
+
+.content__bar {
+    position: relative;
+    height: 100%;
+}
+
+.content__track {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    display: block;
+    width: 0;
+    height: 100%;
+    border-right: 1px solid gainsboro;
+    transform: translateX(-50%);
+}
+
+.track__highlight {
+    position: absolute;
+    top: 0;
+    display: block;
+    width: 0;
+    height: 0;
+    border-right: 1px solid rgb(150, 150, 150);
+}
+
+.content__img {
+    position: relative;
+    top: 0 !important;
+    display: block;
+    width: 7.5rem;
+    height: 7.5rem;
+    background-size: cover;
+    background-position: center;
+    filter: saturate(1.3);
+    z-index: 10;
+    /* border: 1px solid; */
+}
+
+/* .content__col:nth-child(1) .content__img {
+    background-image: url(https://images.unsplash.com/photo-1444116931890-dcede16aa2c3?q=80&w=2340&auto=format&fit=crop);
+} */
+
+.content__img1 {
+    background-image: url(https://images.pexels.com/photos/1809347/pexels-photo-1809347.jpeg);
+    filter: saturate(1.5);
+}
+
+.content__img2 {
+    top: 10%;
+    background-image: url(https://images.unsplash.com/photo-1579167728798-a1cf3d595960?q=80&w=1326&auto=format&fit=crop);
+    filter: saturate(1);
+}
+
+.content__img3 {
+    top: 20%;
+    background-image: url(https://images.pexels.com/photos/247929/pexels-photo-247929.jpeg);
+}
+
+.content__img4 {
+    top: 30%;
+    background-image: url(https://images.pexels.com/photos/3750893/pexels-photo-3750893.jpeg);
+    background-size: 200%;
+}
+
+.content__img5 {
+    top: 40%;
+    background-image: url(https://images.pexels.com/photos/247929/pexels-photo-247929.jpeg);
+}
+
+.content__imgs {
+    width: 7.5rem;
+}
+
+.content__imgs > .content__img {
+    position: absolute;
+    top: 0;
+    opacity: 0;
+}
+
+/* Intro Section */
+
+.section--side {
+    /* width: calc(100% + var(--left-shift)); */
+    /* --left-shift: calc(7.5rem / 2 + 3rem);
+    transform: translateX(calc(-1 * var(--left-shift)));
+    padding-left: 10rem; */
+    width: 100%;
+    z-index: 0;
+}
+
+.section2 {
+    /* background-color: var(--tiffany-blue); */
+}
+
+.featured-posts {
+    max-width: 50rem;
+    width: 100%;
+}
+
+.featured-posts .link--btn {
+    margin-top: 3rem;
+}

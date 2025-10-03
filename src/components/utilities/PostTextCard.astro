@@ -1,0 +1,149 @@
+---
+const { url, frontmatter, category } = Astro.props;
+// const postCategory = frontmatter.category ? frontmatter.category : category;
+// const categoryLink = frontmatter.category ? '#' : `/${category}/`;
+
+---
+
+<li class="post-card">
+    <div class="card__content">
+        <!-- <a href={categoryLink} class="card__category link--underline">
+            {postCategory}
+        </a> -->
+        <a href={url} class="card__link link--no-underline">
+            <div class="card__date">
+                {frontmatter.pubDate}
+            </div>
+            <div class="card__right">
+                <div class="card__title">
+                    {frontmatter.title}
+                </div>
+                {frontmatter.description &&
+                <div class="card__desc">
+                    {frontmatter.description}
+                </div>}
+                <div class="card__forward"></div>
+            </div>
+            <!-- {frontmatter.image &&
+            <img src={frontmatter.image.url} alt={frontmatter.image.altText} class="card__img" />} -->
+        </a>
+    </div>
+</li>
+
+<style>
+    .post-card {
+        max-width: 100%;
+        list-style: none;
+        padding: 1.5rem 1rem 1.6rem 2rem;
+        /* border-bottom: 1px solid var(--text-color); */
+        transition: all 0.2s ease-in-out;
+    }
+
+    @media (max-width: 1024px) {
+        .post-card {
+            max-width: 100%;
+            width: 100%;
+            margin-top: 2rem;
+        }
+
+        .post-card:nth-child(1) {
+            margin-top: 3rem;
+        }
+    }
+
+/*         .post-card:nth-child(1) {
+        background-image: url(../../assets/images/kitty.jpg);
+        background-position: bottom right;
+        background-size: 30%;
+        background-repeat: no-repeat;
+    } */
+
+    .card__content {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        gap: 0.6rem;
+        max-width: 100%;
+        width: 100%;
+        height: 100%;
+    }
+
+    .card__category {
+        text-transform: uppercase;
+        font-size: 0.9rem;
+        font-weight: 500;
+        width: max-content;
+    }
+
+    .card__link {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        gap: 3rem;
+        align-items: flex-start;
+    }
+
+    .card__link:hover .card__title {
+        text-decoration: underline;
+    }
+
+    .card__right {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 0.6rem;
+    }
+
+    .card__date {
+        margin-top: 0.3em;
+        font-family: 'Bauhaus Regular';
+    }
+
+    .card__title {
+        font-size: 2rem;
+        width: max-content;
+        font-family: 'Bauhaus Regular';
+        transition: all 0.2s ease-in-out;
+    }
+
+/*     .card__link:hover .card__title {
+        color: var(--text-color2);
+    } */
+
+    .card__desc {
+        max-width: 100%;
+        text-align: justify;
+        padding-right: 3rem;
+        line-height: 1.6;
+        transition: all 0.2s ease-in-out;
+    }
+
+    .card__img {
+        position: absolute;
+        top: -0.5rem;
+        right: -5rem;
+        display: block;
+        max-height: 120%;
+        transform: translateX(100%);
+    }
+
+    .card__forward {
+        position: absolute;
+        bottom: 1rem;
+        right: 0;
+        width: 2.5rem;
+        height: 2.5rem;
+        background-image: url(../../assets/icons/arrow_right.svg);
+        background-size: 75%;
+        background-position: center;
+        background-repeat: no-repeat;
+        opacity: 0;
+        transition: all 0.2s ease-in-out;
+    }
+
+    .card__link:hover .card__forward {
+        opacity: 1;
+        transform: translateX(25%);
+    }
+</style>

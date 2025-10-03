@@ -1,0 +1,63 @@
+<div class="featured-projs">
+    <a href="#" class="project project1 feature link--no-underline">
+        <div class="project__img" />
+        <div class="project__title">Identifying instruments in classical music</div>
+        <p class="project__desc">A sound-source separation experiment for classical music, which seeks to answer in the language of computers what makes a violin sound like a violin, a piano like a piano, and what distinguishes horns from strings to winds. Then there's also the problem that violins and pianos often run together.
+        </p>
+    </a>
+    <a href="#" class="project link--no-underline">
+        <div class="project__img" />
+        <div class="project__title">Art and the Moral Question - A Tentative Rating</div>
+        <p class="project__desc">Some writers (as well as) artists are intensely moral. Others sink so luxuriously into debauchery that it seems they have given up on the salvation of their souls. Here are somet thoughts on the moral question on art, and a tentative rating of our favorite (and least favorites) practitioners of vice and virtue.</p>
+    </a>
+    <a href="#" class="project link--no-underline">
+        <div class="project__img" />
+        <div class="project__title">Surrealism: made of common clay</div>
+    </a>
+</div>
+
+<style>
+    .featured-projs {
+        max-width: 100%;
+        display: grid;
+        grid-template-columns: minmax(35rem, 3fr) 2fr;
+        gap: 3rem;
+    }
+
+    .project__img {
+        margin-bottom: 1.5rem;
+        filter: grayscale(0.2);
+    }
+
+    .project__title {
+        font-family: 'Bauhaus Bold';
+        text-transform: lowercase;
+        font-size: 1.5rem;
+        line-height: 1.2;
+        margin-bottom: 0.6rem;
+    }
+
+    .project:hover .project__title {
+        text-decoration: 1px underline currentColor;
+    }
+
+    .project__desc {
+        line-height: 1.5;
+        text-align: justify;
+    }
+
+    .feature {
+        max-width: 100%;
+    }
+
+    .feature .project__img {
+        max-width: 100%;
+        aspect-ratio: 8 / 5;
+        background-image: url(../../assets/images/projects/drawing_waveform.png);
+        background-size: 89%;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-color: white;
+        border: 1px solid;
+    }
+</style>

@@ -1,15 +1,40 @@
 ---
-import Navigation from "./Navigation.astro";
-import Logo from './Logo.astro'
+import Logo from "./utilities/Logo.astro";
 import Hamburger from "./Hamburger.astro";
+
+const linksAttrs = [
+    { href: "/", label: "Home" },
+    { href: "/about/", label: "About" },
+    { href: "/blog/", label: "Blog" },
+    { href: "/fiction/", label: "Fiction" },
+];
 ---
 
 <header>
-    <nav>
-        <Logo />
-        <div class="nav__right">
-            <Hamburger />
-            <Navigation />
+    <nav class="">
+        <div class="nav__bar">
+            <div class="nav__inner">
+                <Logo />
+                <div class="nav__btn">
+                    <Hamburger />
+                    <div class="nav__btn-title">Menu</div>
+                </div>
+                <!-- <div class="nav__search"></div> -->
+            </div>
+        </div>
+        <div class="nav-links">
+            {
+                linksAttrs.map(({ href, label }) => (
+                    <a href={href} class="nav__link link--no-underline">
+                        {/* <AnimateLine text={label} noStagger={true} /> */}
+                        <span class="link__inner">{label}</span>
+                    </a>
+                ))
+            }
+            <!-- <a href="/" class="nav__link">Home</a>
+        <a href="/about/" class="nav__link">About</a>
+        <a href="/blog/" class="nav__link">Blog</a>
+        <a href="/fiction/" class="nav__link">Fiction</a> -->
         </div>
     </nav>
 </header>

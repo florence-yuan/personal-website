@@ -1,0 +1,49 @@
+<div class="figure-wrapper">
+    <div class="figure-bg" />
+    <div class="moving-figure" />
+</div>
+
+
+<style>
+    .figure-wrapper {
+        position: relative;
+    }
+
+    @keyframes figureShift {
+        0% {
+            background-position-x: left;
+        }
+        50% {
+            background-position-x: right;
+        }
+        100% {
+            background-position-x: left;
+        }
+    }
+
+    .moving-figure {
+        width: 350px;
+        aspect-ratio: 3 / 5;
+        background-image: url(../../assets/images/test_persuasion.png);
+        /* background-size: 200%; */
+        background-size: 100%;
+        background-repeat: no-repeat;
+        
+        /* animation-name: figureShift; */
+        animation-fill-mode: both;
+        animation-timing-function: steps(1);
+        animation-iteration-count: infinite;
+        animation-duration: 0.4s;
+    }
+
+    .figure-bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+        width: 100%;
+        height: 100%;
+        /* background-image: url(../../assets/images/figure_bg.png); */
+        background-size: contain;
+    }
+</style>

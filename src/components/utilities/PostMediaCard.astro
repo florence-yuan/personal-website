@@ -1,0 +1,165 @@
+---
+const { url, frontmatter, category, appendClass } = Astro.props;
+const postCategory = frontmatter.category ? frontmatter.category : category;
+const categoryLink = frontmatter.category ? '#' : `/${category}/`;
+---
+
+<div class={"gallery__card media-card" + (appendClass ? ' ' + appendClass : '')}>
+    <div class="card__inner">
+        <a href={url} class="card__figure" draggable="false" ondragstart="() => false">
+            {frontmatter.image && <img
+                src={frontmatter.image.url}
+                alt={frontmatter.image.altText}
+                class="card__img"
+            />}
+        </a>
+        <div class="card__content">
+            <a href={url} class="card__main">
+                <div class="card__title">
+                    {frontmatter.title}
+                </div>
+                <div class="card__desc">
+                    {frontmatter.description}
+                </div>
+            </a>
+            <footer class="card__footer">
+                <div class="card__date">
+                    {frontmatter.pubDate}
+                </div>
+                <a href={categoryLink} class="card__category link--underline">
+                    {postCategory}
+                </a>
+            </footer>
+        </div>
+    </div>
+</div>
+
+<style>
+    .media-card {
+        /* width: 25rem; */
+        transform-origin: top;
+        transition: background-color 0.2s ease-in-out;
+    }
+
+    .card__inner {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        background-color: white;
+        margin: 0 1rem;
+    }
+
+    .card__figure {
+        position: relative;
+        overflow: hidden;
+        height: 20rem;
+        line-height: 1;
+    }
+
+    .card__img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        transition: all 0.4s cubic-bezier(0.65, 0, 0.35, 1);
+    }
+
+    .card__inner::after {
+        content: '';
+        position: relative;
+        top: 100%;
+        left: 0;
+        display: block;
+        width: 100%;
+        height: 12rem;
+        z-index: -1;
+    }
+
+    /* .card__img:hover {
+        opacity: 0.6;
+    } */
+
+    .media-card:hover .card__img {
+        filter: brightness(0.8);
+        transform: scale(1.05);
+    }
+
+    .card__content {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        min-height: 12rem;
+        background-color: white;
+        justify-content: space-between;
+        transition: all 0.3s cubic-bezier(0.65, 0, 0.35, 1);
+    }
+
+    @media (min-width: 824px) {
+        .card__content {
+            max-height: 12rem;
+        }
+
+        .media-card:hover .card__content {
+            max-height: 18rem;
+        }
+
+        .card__main {
+            max-height: 8rem;
+            overflow: hidden;
+            mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), 90%, rgba(0, 0, 0, 0));
+        }
+
+        .media-card:hover .card__main {
+            max-height: 12rem;
+            mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), 100%, rgba(0, 0, 0, 0));
+        }
+    }
+
+    .card__main {
+        flex: 2;
+        padding: 0.8rem 1rem 1rem;
+        transition: inherit;
+    }
+
+    .card__title {
+        font-family: "Antic Didone", serif;
+        font-weight: bold;
+        font-size: 1.5rem;
+        line-height: 1;
+    }
+
+    .card__main:hover .card__title {
+        text-decoration: 1px solid underline;
+    }
+
+    .card__desc {
+        margin: 0.5em 0 1em;
+        color: var(--text-color2);
+        letter-spacing: 0.02rem;
+        font-weight: 350;
+        line-height: 1.6;
+    }
+
+    .card__footer {
+        padding: 0.8rem 1rem 1.5rem;
+        display: flex;
+        align-items: center;
+        line-height: 1;
+        color: var(--text-color2);
+        font-size: 0.9rem;
+    }
+
+    .card__date {
+        padding-right: 0.8rem;
+        border-right: 1px solid var(--border-color);
+    }
+
+    .card__category {
+        margin-left: 0.8rem;
+        text-transform: uppercase;
+        color: var(--text-color2) !important;
+    }
+</style>
