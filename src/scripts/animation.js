@@ -22,30 +22,33 @@ function heroAnim() {
     };
     const zoneAnimFuncs = {
         'writer': function() {
-            // gsap.to("#lamp", {
-            //     fill: 'var(--pale-yellow)',
-            //     ease: 'power3.in',
-            //     duration: 0.3
-            // });
+            gsap.set("#lamp", {
+                transformOrigin: 'center'
+            });
 
             let tl = gsap.timeline();
             tl
             .to("#lamp", {
+                scale: 16,
+                duration: 0.3,
+                ease: 'power1.in',
+            })
+            .to("#svg_artist, #svg_coder", {
+                autoAlpha: 0
+            }, "<")
+            .to("#lamp", {
                 fill: '#ffffff',
+                duration: 0.3   
                 // ease: 'power3.in',
                 // duration: 0.3,
-                morphSVG: '#overlay__rect2'
-            })
-            .to("#overlay__rect2", {
-                autoAlpha: 1
-            }, "<+=0.2");
+            });
 
             return tl;
         },
         'coder': function() {
-            // gsap.set("#screen", {
-            //     transformOrigin: 'center'
-            // });
+            gsap.set("#screen", {
+                transformOrigin: 'center'
+            });
             // gsap.to("#screen", {
             //     fill: 'var(--pale-blue)',
             //     scale: 8,
@@ -56,13 +59,34 @@ function heroAnim() {
             let tl = gsap.timeline();
             tl
             .to("#screen", {
-                morphSVG: '#overlay__rect'
+                scale: 5,
+                duration: 0.3
             })
+            .to("#svg_artist, #svg_writer", {
+                autoAlpha: 0
+            }, "<")
             .to("#screen", {
                 fill: '#ffffff',
-            }, "<+=0.2")
-            .to("#overlay__rect", {
-                autoAlpha: 1
+            }, "<+=0.2");
+
+            return tl;
+        },
+        'artist': function() {
+            gsap.set("#head_outline", {
+                transformOrigin: 'center'
+            });
+
+            let tl = gsap.timeline();
+            tl
+            .to("#head_outline", {
+                scale: 16,
+                duration: 0.3
+            })
+            .to("#svg_coder, #svg_writer", {
+                autoAlpha: 0
+            }, "<")
+            .to("#head_outline", {
+                fill: '#ffffff',
             }, "<+=0.2");
 
             return tl;
@@ -81,8 +105,8 @@ function heroAnim() {
         zoneLink.setAttribute("href", "/" + zoneLinks[area]);
 
         svgZone.style.cursor = 'pointer';
-        if (zoneAnimFuncs[area]) {
-            svgZone.addEventListener("click", () => {
+        svgZone.addEventListener("click", () => {
+            if (zoneAnimFuncs[area]) {
                 console.log('hey')
                 let tl = zoneAnimFuncs[area]();
 
@@ -90,8 +114,10 @@ function heroAnim() {
                     console.log("end", zoneLink);
                     zoneLink.click()
                 });
-            });
-        }
+            } else {
+                zoneLink.click()
+            }
+        });
     });
 }
 

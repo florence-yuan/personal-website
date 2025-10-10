@@ -11,26 +11,31 @@ const pageTitle = "Home Page";
 <BaseLayout pageTitle={pageTitle}>
 	<section class="hero-section section--full">
 		<div class="hero__landing">
-			<div class="landing__desc">
-				<p>
-					Hello and welcome! I'm Florence, a student perpetually
-					curious about the phenomenon of absolute honesty. Most of
-					the time, I'm busy making fiction and virtual projects.
-					Occasionally I find time to reflect, and to be sidetracked
-					by things like surrealism, dreams, and avant-garde art.
-				</p>
-				<p>Click on the sections on the right to see more!</p>
+			<h1 class="hero__heading">Curios Galore</h1>
+			<div class="landing__intro">
+				<div class="intro__keywords">
+					Tech, Art & Writing
+				</div>
+				<div class="intro__desc">
+					<p>
+						Hello and welcome! I'm Florence. Most of
+						the time, I'm busy making fiction and virtual projects.
+						Occasionally I find time to reflect, and to be sidetracked
+						by things like surrealism, dreams, and avant-garde art.
+					</p>
+					<p>Click on the sections below to see more!</p>
+				</div>
 			</div>
 			<div class="hero__fig">
 				<Fragment set:html={HeroImage} />
 			</div>
 		</div>
-		<svg class="hero__overlay">
+		<!-- <svg class="hero__overlay">
 			<rect id="overlay__rect" width="2000" height="1000" fill="#ffffff"
 			></rect>
 			<rect id="overlay__rect2" width="2000" height="1000" fill="#ffffff"
 			></rect>
-		</svg>
+		</svg> -->
 		<div class="hero__intro">
 			<div class="hero__left">
 				<div class="hero__pic"></div>

@@ -19,19 +19,34 @@
 
 .hero__landing {
     width: max-content;
-    margin: 4rem auto;
+    margin: 0 auto 4rem;
+}
+
+.landing__intro {
     display: flex;
     gap: 5rem;
+    align-items: flex-start;
+    justify-content: right;
+    margin-bottom: 6rem;
 }
 
-.landing__desc {
+.intro__keywords {
+    font-family: 'Literata', serif;
+    font-size: 4.5rem;
+    font-weight: 100;
     max-width: 20rem;
-    font-weight: bold;
-    text-align: justify;
-    text-indent: 0.5in;
+    line-height: 1;
 }
 
-.landing__desc > p + p {
+.intro__desc {
+    position: relative;
+    top: 1.2em;
+    max-width: 30rem;
+    font-weight: 500;
+    text-align: justify;
+}
+
+.intro__desc > p + p {
     margin-top: 1em;
 }
 
@@ -76,12 +91,21 @@
     max-width: 100%;
 }
 
-.hero__fig > svg #layer1 > g {
+/* .hero__fig > svg #layer1 > g {
     transition: all 0.25s ease-in-out;
 }
 
 .hero__fig > svg #layer1 > g:hover {
     opacity: 0.6;
+} */
+
+.hero__fig > svg #layer1 text {
+    opacity: 0;
+    transition: all 0.25s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.hero__fig > svg #layer1 > g:hover text {
+    opacity: 1;
 }
 
 .hero__desc {
@@ -113,11 +137,11 @@
 }
 
 .hero__heading {
-    /* font-family: 'Josefin Sans', serif; */
-    font-size: 10rem;
+    font-size: calc(8rem + 3vw);
     font-weight: 500;
     line-height: 1.1;
     text-align: justify;
+    font-family: 'Belarus';
 }
 
 .hero__content {
@@ -126,9 +150,9 @@
 }
 
 .hero__pic {
-    width: 40rem;
+    width: 38rem;
     height: 30rem;
-    background-image: url(../assets/images/walking.jpg);
+    background-image: url(../assets/images/walking_graphic.png);
     background-size: cover;
 }
 
@@ -148,7 +172,7 @@
 }
 
 .featured-posts {
-    max-width: 50rem;
+    max-width: 55rem;
     width: 100%;
 }
 

@@ -68,6 +68,13 @@
 }
 
 @font-face {
+    font-family: 'Belarus';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Belarus'), url('../assets/fonts/Belarus.woff') format('woff');
+}
+
+@font-face {
     font-family: 'Graphik Regular';
     font-style: normal;
     font-weight: normal;
@@ -121,7 +128,7 @@ main {
     gap: 0.3em;
     width: max-content;
     padding: 0.5em 0.8em 0.6em 1em;
-    font-family: 'Inter', serif;
+    font-family: 'Graphik Regular';
     border: 1px solid var(--text-color);
 }
 
@@ -172,17 +179,21 @@ article {
 }
 
 article h1 {
-    font-size: 3rem;
+    font-size: 6rem;
     text-transform: lowercase;
     letter-spacing: 0.1rem;
-    margin-bottom: 1rem;
+    line-height: 0.9;
+    margin-bottom: 2rem;
 }
 
 .article__desc {
     font-family: 'Bauhaus Regular';
     font-weight: bold;
     font-size: 1.3rem;
-    margin-bottom: 2rem;
+    line-height: 1.3;
+    text-indent: 0.5in;
+    /* font-family: 'Literata', serif; */
+    margin-bottom: 5rem;
 }
 
 a {

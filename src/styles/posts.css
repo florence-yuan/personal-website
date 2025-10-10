@@ -18,7 +18,7 @@ body {
 .post__title {
     font-size: 5rem;
     font-weight: bold;
-    margin-bottom: 1rem;
+    margin-bottom: 1.3rem;
     line-height: 0.9;
 }
 
@@ -45,15 +45,15 @@ body {
 }
 
 .post__body {
-    margin-bottom: 3rem;
+    /* margin-bottom: 3rem;
     column-width: 18rem;
-    column-gap: 0.5in;
+    column-gap: 0.5in; */
     text-align: justify;
     line-height: 2;
 }
 
 .post__pubDate {
-    font-weight: bold;
+    font-weight: 500;
     margin-bottom: 3rem;
 }
 
@@ -61,9 +61,12 @@ body {
     margin: 0 0 3.5em;
     /* color: var(--text-color2);
     font-style: italic; */
-    font-family: 'Bauhaus Bold';
-    font-size: 1.2rem;
-    line-height: 1.4;
+    font-family: 'Literata', serif;
+    font-size: 1.3rem;
+    font-weight: 300;
+    /* font-family: 'Bauhaus Bold'; */
+    /* font-size: 1.2rem; */
+    /* line-height: 1.4; */
 }
 
 /* .post__body > p:first-child::first-letter {
@@ -79,7 +82,7 @@ body {
     font-size: 4rem;
     line-height: 1;
     float: left;
-    font-family: 'Bauhaus Regular';
+    font-family: 'Bauhaus Bold';
     margin-right: 0.1em;
 }
 

@@ -89,6 +89,7 @@ const { url, frontmatter, category } = Astro.props;
     }
 
     .card__right {
+        flex: 1;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -114,7 +115,7 @@ const { url, frontmatter, category } = Astro.props;
     .card__desc {
         max-width: 100%;
         text-align: justify;
-        padding-right: 3rem;
+        padding-right: 4rem;
         line-height: 1.6;
         transition: all 0.2s ease-in-out;
     }
@@ -130,20 +131,21 @@ const { url, frontmatter, category } = Astro.props;
 
     .card__forward {
         position: absolute;
-        bottom: 1rem;
+        bottom: 50%;
         right: 0;
-        width: 2.5rem;
-        height: 2.5rem;
-        background-image: url(../../assets/icons/arrow_right.svg);
+        width: 2.7rem;
+        height: 2.7rem;
+        background-image: url(../../assets/icons/arrow_forward.svg);
         background-size: 75%;
         background-position: center;
         background-repeat: no-repeat;
         opacity: 0;
+        transform: translateY(50%);
         transition: all 0.2s ease-in-out;
     }
 
     .card__link:hover .card__forward {
         opacity: 1;
-        transform: translateX(25%);
+        transform: translateX(25%) translateY(50%);
     }
 </style>
