@@ -104,7 +104,8 @@ function svgAnim() {
                 let tl = zoneAnimFuncs[area]();
 
                 tl.call(() => {
-                    zoneLink.click()
+                    zoneLink.click();
+                    tl.revert();
                 });
             } else {
                 zoneLink.click()
@@ -114,6 +115,13 @@ function svgAnim() {
 }
 
 function textAnim() {
+    const animLines = SplitText.create(".anim-line", {
+        type: "chars",
+        mask: "chars",
+        charsClass: "char++"
+    });
+    gsap.from(animLines.chars, {xPercent: -100, stagger: 0.03, delay: 0.15, duration: 0.4, ease: "power1.inOut"})
+
     const featuredLines = SplitText.create(".banner__featured > li > a", {
         type: "lines",
         mask: "lines",
@@ -121,14 +129,15 @@ function textAnim() {
     });
 
     gsap.set(".banner__featured .line-mask", {
+        backgroundSize: '100% 100%',
         animationDelay: (i) => i * 0.1 + 's'
     });
 
     let lineAnimTl = gsap.timeline({
-        // scrollTrigger: {
-        //     trigger: ".landing__banner",
-        //     start: "top center"
-        // }
+        scrollTrigger: {
+            trigger: ".landing__banner",
+            start: "top center"
+        }
     });
     lineAnimTl
     .from(featuredLines.lines, {yPercent: 100, stagger: 0.1, delay: 0.15})

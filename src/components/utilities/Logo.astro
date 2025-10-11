@@ -1,3 +1,7 @@
-<a href="/" class="header-logo link--no-underline">
-    Florence Yuan
+---
+const { isHome } = Astro.props;
+---
+
+<a href="/" class={"header-logo link--no-underline" + (!isHome ? ' logo--to-home' : '')}>
+    {isHome ? 'Florence Yuan' : 'Back to Home'}
 </>

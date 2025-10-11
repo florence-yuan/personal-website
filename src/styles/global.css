@@ -96,11 +96,6 @@ body.no-scroll {
     overflow: hidden;
 }
 
-body.has-bg {
-    min-height: 100vh;
-    background-image: radial-gradient(circle at 10% top, rgb(186, 219, 186) 5%, white 30%);
-}
-
 main {
     min-height: calc(100vh - 10rem);
 }
@@ -154,9 +149,7 @@ main {
 }
 
 .link--social {
-    font-family: 'Inter', sans-serif;
     font-weight: normal;
-    font-size: 0.9rem;
 }
 
 h1,
@@ -164,7 +157,6 @@ h2,
 h3 {
     font-family: 'Belarus';
     font-weight: bold;
-    /* font-family: 'Inter', sans-serif; */
 }
 
 section {
@@ -243,89 +235,6 @@ a:not(.link--no-underline):hover::after {
 
 /* Section Styles */
 
-
-/* @media screen and (min-width: 636px) {
-    .section--full {
-        min-height: 100vh;
-    }
-} */
-
-.section__image {
-    display: block;
-    max-width: 100%;
-    margin: 0 auto;
-}
-
-.section__heading {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-}
-
-.section__title {
-    font-family: 'Inter', sans-serif;
-    position: relative;
-    font-weight: 500;
-    font-size: 4rem;
-    margin-bottom: 2rem;
-}
-
-.section--basic .section__title {
-    font-size: calc(3rem + 3vw);
-}
-
-.section--two-hor .section__pre {
-    padding-bottom: 1rem;
-    font-family: "Forum", serif;
-    font-style: italic;
-}
-
-.section--two-hor .section__heading {
-    padding-bottom: 1rem;
-    border-bottom: 1px solid currentColor;
-}
-
-.section--two-hor .section__content {
-    padding-top: 1.5rem;
-}
-
-@media screen and (min-width: 840px) {
-    .section--two-ver {
-        display: flex;
-        align-items: center;
-        padding-left: calc(2vw + 5rem);
-    }
-
-    .section__left,
-    .section__right {
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
-
-    .section__left {
-        max-width: 35rem;
-        border-right: 1px solid currentColor;
-    }
-
-    .section__left>* {
-        padding-right: 6rem;
-    }
-
-    .section__right {
-        flex: 1;
-    }
-
-    .section__right>* {
-        padding-left: 4rem;
-    }
-}
-
-.section--blog .section__title {
-    font-size: 2rem;
-}
-
 /* Navigation Styles */
 
 nav {
@@ -356,7 +265,8 @@ nav {
 }
 
 .header-logo {
-    display: block;
+    display: flex;
+    align-items: center;
     width: max-content;
     font-family: 'Belarus';
     font-size: 1.4rem;
@@ -370,6 +280,19 @@ nav {
 
 .header-logo:hover {
     opacity: 0.8;
+}
+
+.logo--to-home::before {
+    content: '';
+    display: inline-block;
+    width: 1.7rem;
+    height: 1.7rem;
+    margin-right: .7rem;
+    background-image: url(../assets/icons/arrow_left.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: top;
+    transform: translateY(-10%);
 }
 
 .nav__btn {

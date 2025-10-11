@@ -14,34 +14,23 @@
     border-bottom: 1px solid;
 }
 
-.hero__landing {
-    width: max-content;
-    max-width: 95%;
-    margin: 0 auto 2rem;
-}
-
-.landing__side {
-    font-family: 'Literata', serif;
-    writing-mode: sideways-lr;
-    text-align: right;
-    font-weight: 500;
-    font-size: 1.3rem;
-}
-
 .hero__heading {
+    width: 100%;
     position: relative;
-    font-size: calc(11rem + 3vw);
+    display: block;
+    font-size: 13vw;
     font-weight: 500;
     line-height: 0.8;
-    text-align: justify;
     border-bottom: 20px solid;
+    font-kerning: none; 
+text-rendering: optimizeSpeed;
 }
 
-@media (max-width: 1350px) {
+/* @media (max-width: 1350px) {
     .hero__heading {
     font-size: 15vw;
     }
-}
+} */
 
 .hero__heading::after {
     position: absolute;
@@ -52,6 +41,17 @@
     width: 100%;
     height: 0;
     border-bottom: 5px solid;
+}
+
+.hero__heading .char {
+    position: relative;
+    top: 0.1em;
+}
+
+.hero__landing {
+    width: max-content;
+    max-width: 95%;
+    margin: 0 auto 3rem;
 }
 
 .landing__intro {
@@ -127,6 +127,10 @@
 
 .banner__featured li + li {
     margin-top: 1em;
+}
+
+.banner__featured a {
+    display: block;
 }
 
 @keyframes link-reveal {
@@ -224,18 +228,17 @@
 
 .hero__poem .poem__heading {
     font-family: 'Belarus', serif;
-    font-size: 2rem;
+    font-size: 3rem;
     margin-bottom: 1rem;
 }
 
 .hero__poem .poem__content {
     font-family: 'Graphik Regular';
-    font-weight: bold;
 }
 
 .hero__note {
     display: flex;
-    margin-top: 1rem;
+    margin-top: 2rem;
     gap: .6rem;
 }
 

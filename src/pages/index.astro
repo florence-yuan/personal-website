@@ -5,10 +5,10 @@ import HeroImage from "./../assets/images/drawing.svg?raw";
 const pageTitle = "Home Page";
 ---
 
-<BaseLayout pageTitle={pageTitle}>
+<BaseLayout pageTitle={pageTitle} isHome={true}>
 	<section class="hero-section section--full">
 		<div class="hero__landing">
-			<h1 class="hero__heading">Curios Galore</h1>
+			<h1 class="hero__heading anim-line">Curios Galore</h1>
 			<div class="landing__intro">
 				<div class="intro__keywords">
 					Tech, Art & Writing
@@ -20,7 +20,7 @@ const pageTitle = "Home Page";
 						find time to reflect, and to be sidetracked by things
 						like surrealism, dreams, and avant-garde art.
 					</p>
-					<p>Click on the sections below to see more!</p>
+					<p>Hover/click on the figure below to see more!</p>
 				</div>
 			</div>
 			<div class="landing__banner">
@@ -29,7 +29,7 @@ const pageTitle = "Home Page";
 				</div>
 				<ul class="banner__featured">
 					<h2>FEATURED</h2>
-					<li><a href="/posts/blog/7_seasons" class="link--no-underline">January hits like a truck...</a></li>
+					<li><a href="/posts/blog/7_seasons" class="link--no-underline">January hit like a truck...</a></li>
 					<li><a href="/posts/blog/6_why_i_write" class="link--no-underline">Why I write: Venus &<br/> Frankenstein</a></li>
 					<li><a href="/posts/blog/4_much_ado_about_nothing_rainy_days" class="link--no-underline">Much ado about nothing<br/>(ed. rainy)</a></li>
 				</ul>

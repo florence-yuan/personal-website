@@ -8,13 +8,15 @@ const linksAttrs = [
     { href: "/tech/", label: "Projects" },
     { href: "/fiction/", label: "Curios" },
 ];
+
+const { isHome } = Astro.props;
 ---
 
 <header>
     <nav class="">
         <div class="nav__bar">
             <div class="nav__inner">
-                <Logo />
+                <Logo isHome={isHome} />
                 <div class="nav__btn">
                     <Hamburger />
                     <div class="nav__btn-title">Menu</div>

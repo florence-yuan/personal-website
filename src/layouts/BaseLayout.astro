@@ -4,7 +4,7 @@ import Footer from "../components/Footer.astro";
 import "../styles/global.css";
 import "../styles/index.css";
 
-const { pageTitle, hasBg } = Astro.props;
+const { pageTitle, isHome } = Astro.props;
 ---
 
 <html lang="en" transition:animate="fade">
@@ -21,8 +21,8 @@ const { pageTitle, hasBg } = Astro.props;
 		<meta name="generator" content={Astro.generator} />
 		<title>Florence Yuan | {pageTitle}</title>
 	</head>
-	<body class={hasBg ? "has-bg" : ""}>
-		<Header />
+	<body>
+		<Header isHome={isHome} />
 		<main>
 			<slot />
 		</main>
