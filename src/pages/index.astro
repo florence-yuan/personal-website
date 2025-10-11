@@ -2,9 +2,6 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import HeroImage from "./../assets/images/drawing.svg?raw";
 
-import FeaturedPosts from "../components/index/FeaturedPosts.astro";
-import FeaturedProjects from "../components/index/FeaturedProjects.astro";
-
 const pageTitle = "Home Page";
 ---
 
@@ -18,48 +15,67 @@ const pageTitle = "Home Page";
 				</div>
 				<div class="intro__desc">
 					<p>
-						Hello and welcome! I'm Florence. Most of
-						the time, I'm busy making fiction and virtual projects.
-						Occasionally I find time to reflect, and to be sidetracked
-						by things like surrealism, dreams, and avant-garde art.
+						Hello and welcome! I'm Florence. Most of the time, I'm
+						busy making fiction and virtual projects. Occasionally I
+						find time to reflect, and to be sidetracked by things
+						like surrealism, dreams, and avant-garde art.
 					</p>
 					<p>Click on the sections below to see more!</p>
 				</div>
 			</div>
-			<div class="hero__fig">
-				<Fragment set:html={HeroImage} />
+			<div class="landing__banner">
+				<div class="hero__fig">
+					<Fragment set:html={HeroImage} />
+				</div>
+				<ul class="banner__featured">
+					<h2>FEATURED</h2>
+					<li><a href="/posts/blog/7_seasons" class="link--no-underline">January hits like a truck...</a></li>
+					<li><a href="/posts/blog/6_why_i_write" class="link--no-underline">Why I write: Venus &<br/> Frankenstein</a></li>
+					<li><a href="/posts/blog/4_much_ado_about_nothing_rainy_days" class="link--no-underline">Much ado about nothing<br/>(ed. rainy)</a></li>
+				</ul>
 			</div>
+			<p class="hero__note">Curiosities I've cobbled together. Left: tech; Center: art; Right: writing</p>
 		</div>
 		<!-- <svg class="hero__overlay">
 			<rect id="overlay__rect" width="2000" height="1000" fill="#ffffff"
 			></rect>
 			<rect id="overlay__rect2" width="2000" height="1000" fill="#ffffff"
-			></rect>
+			></rect> | January hit like a truck, May a call
+					to arms, sleepy September like a dandelion, but what next?
 		</svg> -->
+	</section>
+	<section>
 		<div class="hero__intro">
-			<div class="hero__left">
+			<div class="intro__left">
 				<div class="hero__pic"></div>
 			</div>
-			<div class="hero__right">
+			<div class="intro__right">
 				<div class="hero__poem">
 					<p class="poem__heading">A poem, at random</p>
-					<pre class="poem__content">
-Loneliness fits me snugly
-Like a wet coat in the rain, a flimsy thing
-Heavy with the in-substance of dissolving
-And all touch is but the touch of my own skin
-Somewhere along the road there strolls a dream
-Now and then it pauses, and lifts its head, as if
-To inhale this strange atmosphere of rain
-Only it is not rain at all, but a soul
-As lonely as its own, a wet coat
-Turned inside out
-To bare skin
-Meeting rain
-And in between
-A conglomeration of being
-We meet rain with our skin and nothing else
-In this we walk parallel with dreams
+					<pre
+						class="poem__content">
+When I close my eyes,
+I am met with a darkness that suggests sight,
+And somewhere within myself I feel a live and limpid sinew
+That winds serpentine like trains at night,
+And at every bend drinks in the world anew,
+And prattles like a child who claps at the light
+That someone turns on, midnight.
+
+Bright yellow in motion eternal,
+I see your eyes in another window,
+Another train that runs through the night and whistles,
+Another life that drinks in the dew and the clouds that trundle.
+You ask if I see a flag, a scarlet flag that billows –
+A great man fashioned it, wrote upon it great prophecies that echo.
+But I cannot make out its words, I cannot say what it says,
+I cannot love its loves and labor over its labors.
+
+I can only see your eyes and my eyes in these near windows,
+I can only join you in your laughter and your delight and drink in the
+Clouds that, all different, all beautiful, across brightening skies tumble –
+I cannot articulate meaning, but I am helpless in an unutterable joy –
+In this sunrise we shall all awake, and life has no preamble.
 					</pre>
 				</div>
 			</div>

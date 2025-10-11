@@ -1,8 +1,12 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import { Image } from "astro:assets";
 
-const artworks = Object.keys(import.meta.glob("/src/assets/images/artworks/*.jpg", { eager: true }));
-// console.log(artworks)
+// const artworks = Object.keys(import.meta.glob("/src/assets/images/artworks/*.jpg", { eager: true }));
+const artworks = Object.values(import.meta.glob<{ default: ImageMetadata }>('/src/assets/images/artworks/*.jpg'));
+// const artworks = allArtworks
+
+console.log(artworks)
 ---
 
 <BaseLayout pageTitle='Writing'>
@@ -11,8 +15,14 @@ const artworks = Object.keys(import.meta.glob("/src/assets/images/artworks/*.jpg
 		<p class="article__desc">Some portraits and landscapes</p>
 		<div class="art-gallery">
 			{artworks.map(artwork =>
-				<img
-					src={artwork}
+				// <img
+				// 	src={artwork}
+				// 	alt="no image available"
+				// 	class="gallery__work"
+				// />
+				<Image
+					// width="300"
+					src={artwork()}
 					alt="no image available"
 					class="gallery__work"
 				/>
@@ -29,13 +39,15 @@ const artworks = Object.keys(import.meta.glob("/src/assets/images/artworks/*.jpg
 		column-gap: 3rem; */
 		display: grid;
 		grid-template-columns: repeat(auto-fill, 16rem);
+		align-items: flex-start;
 		gap: 3rem;
 	}
 
 	.gallery__work {
-		width: 100%;
+		max-width: 100%;
+		height: auto;
 		/* filter: grayscale(1); */
-		clip-path: inset(5% 5%);
+		/* clip-path: inset(5% 5%); */
 	}
 
 	.gallery__work:is(:nth-child(6), :nth-child(9)) {

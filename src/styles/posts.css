@@ -64,31 +64,19 @@ body {
     font-family: 'Literata', serif;
     font-size: 1.3rem;
     font-weight: 300;
-    /* font-family: 'Bauhaus Bold'; */
-    /* font-size: 1.2rem; */
-    /* line-height: 1.4; */
 }
 
-/* .post__body > p:first-child::first-letter {
-    float: left;
-    color: var(--dark-red);
-    font-size: 5rem;
-    font-weight: bold;
-    font-family: 'Merriweather', serif;
-    margin: 0.3rem 0.5rem 0.5rem;
-} */
-
 .post__body > p:first-child::first-letter {
-    font-size: 4rem;
+    font-size: 5rem;
     line-height: 1;
     float: left;
-    font-family: 'Bauhaus Bold';
+    font-family: 'Belarus';
     margin-right: 0.1em;
 }
 
 .post__body > p + p {
     margin-top: 0.8em;
-    text-indent: 0.5in;
+    /* text-indent: 0.5in; */
 }
 
 /* Tags Styles */

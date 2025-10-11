@@ -6,14 +6,7 @@ import { MorphSVGPlugin } from "gsap/MorphSVGPlugin";
 
 gsap.registerPlugin(ScrollTrigger, SplitText, MorphSVGPlugin);
 
-function heroAnim() {
-    MorphSVGPlugin.convertToPath('#screen, #overlay__rect');
-    gsap.set(".hero__overlay > *", { autoAlpha: 0 });
-
-    // document.querySelector("#zone_coding").addEventListener("click", () => {
-    //     console.log("HELLO!");
-    // });
-
+function svgAnim() {
     const heroAreas = ['coder', 'artist', 'writer'];
     const zoneLinks = {
         'coder': 'tech',
@@ -103,15 +96,14 @@ function heroAnim() {
 
         const zoneLink = document.createElement("a");
         zoneLink.setAttribute("href", "/" + zoneLinks[area]);
+        document.querySelector("footer").appendChild(zoneLink);
 
         svgZone.style.cursor = 'pointer';
         svgZone.addEventListener("click", () => {
             if (zoneAnimFuncs[area]) {
-                console.log('hey')
                 let tl = zoneAnimFuncs[area]();
 
                 tl.call(() => {
-                    console.log("end", zoneLink);
                     zoneLink.click()
                 });
             } else {
@@ -119,6 +111,37 @@ function heroAnim() {
             }
         });
     });
+}
+
+function textAnim() {
+    const featuredLines = SplitText.create(".banner__featured > li > a", {
+        type: "lines",
+        mask: "lines",
+        linesClass: "line++"
+    });
+
+    gsap.set(".banner__featured .line-mask", {
+        animationDelay: (i) => i * 0.1 + 's'
+    });
+
+    let lineAnimTl = gsap.timeline({
+        // scrollTrigger: {
+        //     trigger: ".landing__banner",
+        //     start: "top center"
+        // }
+    });
+    lineAnimTl
+    .from(featuredLines.lines, {yPercent: 100, stagger: 0.1, delay: 0.15})
+    .to(".banner__featured .line-mask", {
+        backgroundSize: '100% 0',
+        stagger: 0.1,
+        duration: 0.25,
+    }, "<");
+}
+
+function heroAnim() {
+    svgAnim();
+    textAnim();
 }
 
 document.addEventListener("DOMContentLoaded", (event) => {

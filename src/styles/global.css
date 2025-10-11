@@ -118,8 +118,9 @@ main {
 }
 
 .footer__link {
-    font-size: 1.5rem;
-    font-family: 'Bauhaus Regular';
+    font-size: 2rem;
+    font-family: 'Belarus';
+    text-transform: uppercase;
 }
 
 .link--btn {
@@ -161,14 +162,14 @@ main {
 h1,
 h2,
 h3 {
-    font-family: 'Bauhaus Regular';
+    font-family: 'Belarus';
     font-weight: bold;
     /* font-family: 'Inter', sans-serif; */
 }
 
 section {
     position: relative;
-    padding: 3rem 6rem 3rem calc(2rem + 2vw);
+    margin: 0 6rem 0 calc(2rem + 2vw);
 }
 
 /* Article */
@@ -180,7 +181,6 @@ article {
 
 article h1 {
     font-size: 6rem;
-    text-transform: lowercase;
     letter-spacing: 0.1rem;
     line-height: 0.9;
     margin-bottom: 2rem;
@@ -343,7 +343,9 @@ nav {
 }
 
 .nav__bar {
+    margin: 0 1rem;
     padding: 2rem 5rem 1rem 4rem;
+    border-bottom: 1px solid;
 }
 
 .nav__inner {
@@ -356,8 +358,9 @@ nav {
 .header-logo {
     display: block;
     width: max-content;
-    font-family: 'Bauhaus Regular';
-    font-size: 1.3rem;
+    font-family: 'Belarus';
+    font-size: 1.4rem;
+    font-weight: bold;
     text-transform: uppercase;
     letter-spacing: 0.1rem;
     color: inherit;
@@ -464,9 +467,9 @@ nav.expanded .nav-links {
 .nav__link {
     display: block;
     font-size: 4rem;
-    font-family: 'Bauhaus Regular', serif;
+    font-family: 'Belarus';
+    text-transform: uppercase;
     letter-spacing: 0.1rem;
-    text-transform: capitalize;
     color: inherit;
     line-height: 1.35;
     overflow-y: hidden;

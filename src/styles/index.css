@@ -10,39 +10,73 @@
 }
 
 .hero-section {
-    /* display: flex;
-    justify-content: center; */
-    /* gap: 5rem; */
-    width: 100%;
-    padding: 2rem 0;
+    padding-top: 6rem;
+    border-bottom: 1px solid;
 }
 
 .hero__landing {
     width: max-content;
-    margin: 0 auto 4rem;
+    max-width: 95%;
+    margin: 0 auto 2rem;
+}
+
+.landing__side {
+    font-family: 'Literata', serif;
+    writing-mode: sideways-lr;
+    text-align: right;
+    font-weight: 500;
+    font-size: 1.3rem;
+}
+
+.hero__heading {
+    position: relative;
+    font-size: calc(11rem + 3vw);
+    font-weight: 500;
+    line-height: 0.8;
+    text-align: justify;
+    border-bottom: 20px solid;
+}
+
+@media (max-width: 1350px) {
+    .hero__heading {
+    font-size: 15vw;
+    }
+}
+
+.hero__heading::after {
+    position: absolute;
+    bottom: -30px;
+    left: 0;
+    content: "";
+    display: block;
+    width: 100%;
+    height: 0;
+    border-bottom: 5px solid;
 }
 
 .landing__intro {
+    padding-top: 2em;
     display: flex;
-    gap: 5rem;
+    gap: calc(2rem + 3vw);
     align-items: flex-start;
-    justify-content: right;
-    margin-bottom: 6rem;
+    justify-content: space-between;
+    margin-bottom: 1rem;
 }
 
 .intro__keywords {
-    font-family: 'Literata', serif;
-    font-size: 4.5rem;
+    /* max-width: calc(15rem + 6vw); */
+    max-width: 25rem;
+    text-align: justify;
+    font-family: 'Belarus', serif;
     font-weight: 100;
-    max-width: 20rem;
+    font-size: 4rem;
     line-height: 1;
 }
 
 .intro__desc {
     position: relative;
-    top: 1.2em;
-    max-width: 30rem;
-    font-weight: 500;
+    top: .1em;
+    max-width: 35rem;
     text-align: justify;
 }
 
@@ -70,19 +104,72 @@
     z-index: -1;
 } */
 
-.hero__overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    z-index: 100;
-    pointer-events: none;
+.landing__banner {
+    display: flex;
+    gap: 3rem;
+    align-items: flex-end;
+}
+ 
+.banner__featured {
+    width: 25rem;
+}
+ 
+.banner__featured h2 {
+    margin-bottom: 1em;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    transform: translateX(5px);
 }
 
-#overlay__rect {
-    width: 100vw !important;
-    height: 100vh !important;
+.banner__featured li {
+    list-style: none;
+}
+
+.banner__featured li + li {
+    margin-top: 1em;
+}
+
+@keyframes link-reveal {
+    1% {
+        background-size: 100% 100%;
+    }
+    20% {
+        background-size: 100% 100%;
+    }
+    100% {
+        background-size: 100% 0%;
+    }
+}
+
+.banner__featured a .line-mask {
+    display: block;
+    width: max-content;
+    font-size: 2.5rem;
+    font-family: 'Belarus', serif;
+    text-transform: uppercase;
+    text-align: justify;
+
+    background: linear-gradient(0deg, black, black) no-repeat top / 100% 100%;
+/*     animation-name: link-reveal;
+    animation-duration: 0.25s;
+    animation-delay: 0.2s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: both; */
+}
+
+.banner__featured a:hover .line {
+    text-decoration: 2px underline;
+}
+
+@media (max-width: 1000px) {
+    .landing__banner {
+        display: block;
+    }
+
+    .banner__featured {
+        max-width: 100%;
+        margin: 3rem 1rem 0;
+    }
 }
 
 .hero__fig > svg {
@@ -115,14 +202,28 @@
 }
 
 .hero__intro {
-    margin: 8rem auto 3rem;
-    width: max-content;
+    margin: 4rem auto 3rem;
     display: flex;
     gap: 5rem;
+    justify-content: center;
+}
+
+.intro__left {
+    flex: 1;
+    width: max-content;
+    max-width: 42rem;
+}
+
+.hero__pic {
+    /* width: 42rem; */
+    width: 100%;
+    height: 30rem;
+    background-image: url(../assets/images/walking_graphic.png);
+    background-size: cover;
 }
 
 .hero__poem .poem__heading {
-    font-family: 'Bauhaus Regular';
+    font-family: 'Belarus', serif;
     font-size: 2rem;
     margin-bottom: 1rem;
 }
@@ -132,28 +233,19 @@
     font-weight: bold;
 }
 
-.hero__left {
-    /* max-width: 40rem; */
+.hero__note {
+    display: flex;
+    margin-top: 1rem;
+    gap: .6rem;
 }
 
-.hero__heading {
-    font-size: calc(8rem + 3vw);
-    font-weight: 500;
-    line-height: 1.1;
-    text-align: justify;
-    font-family: 'Belarus';
-}
-
-.hero__content {
-    margin: 3rem;
-    height: 80%;
-}
-
-.hero__pic {
-    width: 38rem;
-    height: 30rem;
-    background-image: url(../assets/images/walking_graphic.png);
-    background-size: cover;
+.hero__note::before {
+    content: "";
+    display: inline-block;
+    width: 1.5rem;
+    height: 1.5rem;
+    background-image: url(../assets/icons/arrow_top.svg);
+    background-repeat: no-repeat;
 }
 
 /* Intro Section */
