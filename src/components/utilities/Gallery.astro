@@ -31,7 +31,13 @@
         background-repeat: no-repeat;
         border: none;
         border-radius: 50%;
+        cursor: pointer;
         /* display: none; */
+    }
+
+    .gallery__btn:disabled {
+        opacity: 0.5;
+        cursor: default;
     }
 
     .gallery__btn--left {
@@ -45,7 +51,7 @@
     .gallery__inner {
         flex: 1;
         max-width: calc(100% - 5rem);
-        overflow-x: auto;
+        overflow-x: hidden;
     }
 
     .gallery__flex {
@@ -54,6 +60,4 @@
         display: flex;
         align-items: center;
     }
-
-
 </style>

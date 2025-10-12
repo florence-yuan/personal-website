@@ -1,24 +1,52 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import PostList from "../components/utilities/PostList.astro";
-
-const pageTitle = 'Blog';
+import FeaturedPosts from "../components/index/FeaturedPosts.astro";
 ---
 
-<BaseLayout pageTitle={pageTitle} hasBg={true}>
-	<section class="section--blog">
-		<h1 class="section__title title--no-break">
-			The Curiosity Shop
+<BaseLayout pageTitle='Writing'>
+	<article>
+		<div class="article__fig" />
+		<h1>
+			<i>the</i><br/>
+			Writings<br/>
+			<i>Wall</i>
 		</h1>
-		<p>Welcome to my blog! Here you'll find a collection of normal blog posts mixed with all manners of curiosities.</p>
-	
-		<PostList category="blog"/>
-	</section>
+		<!-- <h1>Writings</h1> -->
+		<p class="article__desc">
+			A place for essays and reflections. Some are inspired by the great novelists and artists,
+			some by failures large and small. Side by side they are rather like a wall of graffiti -
+			but there's a charm to it, I think. My (very much still in-progress) fiction archive is available
+			<a href="/fiction">here</a>.
+		</p>
+		<FeaturedPosts />
+	</article>
 </BaseLayout>
 
 <style>
-	.section--blog .section__title {
-		font-size: 5rem;
-		margin-top: 2rem;
+	h1 > i:nth-child(1) {
+		margin-left: 1.5em;
+	}
+
+	article::before {
+		content: "";
+		position: absolute;
+		top: 0;
+		right: 10%;
+		width: 70%;
+		height: 20rem;
+		/* background-color: gainsboro; */
+		z-index: -1;
+	}
+
+	.article__fig {
+		display: block;
+		width: 23rem;
+		height: 31rem;
+		background-image: url(../assets/images/drawing-1.svg);
+		background-size: contain;
+		background-repeat: no-repeat;
+		transform: translateX(150%);
+		margin-top: -10rem;
+		margin-bottom: -20rem;
 	}
 </style>

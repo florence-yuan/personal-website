@@ -11,7 +11,7 @@ function svgAnim() {
     const zoneLinks = {
         'coder': 'tech',
         'artist': 'art',
-        'writer': 'writing'
+        'writer': 'blog'
     };
     const zoneAnimFuncs = {
         'writer': function() {
