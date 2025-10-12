@@ -153,13 +153,21 @@ text-rendering: optimizeSpeed;
     text-transform: uppercase;
     text-align: justify;
 
-    background: linear-gradient(0deg, black, black) no-repeat top / 100% 100%;
-/*     animation-name: link-reveal;
-    animation-duration: 0.25s;
-    animation-delay: 0.2s;
-    animation-timing-function: ease-in-out;
-    animation-fill-mode: both; */
+    --bg: black;
+    background: linear-gradient(0deg, var(--bg), var(--bg)) no-repeat top / 100% 100%;
 }
+
+/* .banner__featured li:nth-child(2) {
+    --bg: #d62337;
+}
+
+.banner__featured li:nth-child(3) {
+    --bg: #fbd308;
+}
+
+.banner__featured li:nth-child(4) {
+    --bg: #2d44ed;
+} */
 
 .banner__featured a:hover .line {
     text-decoration: 2px underline;
@@ -208,22 +216,25 @@ text-rendering: optimizeSpeed;
 .hero__intro {
     margin: 4rem auto 3rem;
     display: flex;
-    gap: 5rem;
+    gap: calc(3rem + 3vw);
     justify-content: center;
 }
 
 .intro__left {
     flex: 1;
     width: max-content;
-    max-width: 42rem;
+    max-width: 25rem;
 }
 
 .hero__pic {
     /* width: 42rem; */
     width: 100%;
-    height: 30rem;
-    background-image: url(../assets/images/walking_graphic.png);
-    background-size: cover;
+    height: 35rem;
+    background-image: url(../assets/images/hero_img.png);
+    background-size: 107%;
+    background-position: center;
+    border-bottom: 10px solid;
+    border-left: 6px solid;
 }
 
 .hero__poem .poem__heading {
