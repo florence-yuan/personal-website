@@ -1,61 +1,90 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import { Image } from "astro:assets";
+import Gallery from "../components/utilities/Gallery.astro";
 
 // const artworks = Object.keys(import.meta.glob("/src/assets/images/artworks/*.jpg", { eager: true }));
 const artworks = Object.values(import.meta.glob<{ default: ImageMetadata }>('/src/assets/images/artworks/*.jpg'));
-// const artworks = allArtworks
-
-console.log(artworks)
+const graphics = Object.values(import.meta.glob<{ default: ImageMetadata }>('/src/assets/images/artworks/graphics/*.svg'));
+const portraits = Object.values(import.meta.glob<{ default: ImageMetadata }>('/src/assets/images/artworks/graphics2/*.svg'));
 ---
 
-<BaseLayout pageTitle='Writing'>
+<BaseLayout pageTitle='Artworks'>
 	<article>
 		<h1>Art</h1>
-		<p class="article__desc">Some portraits and landscapes</p>
-		<div class="art-gallery">
-			{artworks.map(artwork =>
-				// <img
-				// 	src={artwork}
-				// 	alt="no image available"
-				// 	class="gallery__work"
-				// />
-				<Image
-					// width="300"
-					src={artwork()}
-					alt="no image available"
-					class="gallery__work"
-				/>
-			)}
-		</div>
+		<p class="article__desc">Some graphics, portraits and landscapes I've created.</p>
+		<section class="gra-section">
+			<Gallery>
+				{graphics.map(artwork =>
+					<Image
+						src={artwork()}
+						alt="loading"
+						class="gallery__work"
+					/>
+				)}
+			</Gallery>
+			<p class="">Dichromatic graphic art covers for a magazine release</p>
+		</section>
+		<section>
+			<Gallery>
+				{artworks.map(artwork =>
+					<Image
+						src={artwork()}
+						alt="loading"
+						class="gallery__work"
+					/>
+				)}
+			</Gallery>
+		</section>
+		<section class="por-section">
+			<Gallery>
+				{portraits.map(artwork =>
+					<Image
+						src={artwork()}
+						alt="loading"
+						class="gallery__work"
+					/>
+				)}
+			</Gallery>
+			<p class="">Graphic portraits; inspired by the Portuguese poet Pessoa's concept of heteronyms</p>
+		</section>
 	</article>
 </BaseLayout>
 
 <style>
-	.art-gallery {
-		width: 100%;
-		margin: 0 auto;
-		/* column-width: 16rem;
-		column-gap: 3rem; */
-		display: grid;
-		grid-template-columns: repeat(auto-fill, 16rem);
-		align-items: flex-start;
-		gap: 3rem;
+	article {
+		max-width: 90%;
 	}
+
+	article > *:not(section) {
+		max-width: 60rem;
+		margin: 0 auto;
+	}
+
+	article > section {
+		padding: 3rem 0;
+	}
+
+	article > section:not(:last-child) {
+        border-bottom: 10px solid;
+	}
+
+	article > section > p {
+		margin: 1rem 2rem 0 0;
+		text-align: right;
+	}
+
+	/* article > section + section {
+		margin-top: 10rem;
+	} */
 
 	.gallery__work {
-		max-width: 100%;
-		height: auto;
-		/* filter: grayscale(1); */
-		/* clip-path: inset(5% 5%); */
+		max-height: 26rem;
+		width: auto;
+		padding: 1rem 3rem;
 	}
 
-	.gallery__work:is(:nth-child(6), :nth-child(9)) {
-		grid-column: 1 / 3;
-		/* filter: grayscale(1) contrast(1.5); */
-	}
-
-	.gallery__work:is(:nth-child(7)) {
-		grid-column: 2 / -1;
+	.por-section .gallery__work {
+		max-height: 18rem;
 	}
 </style>

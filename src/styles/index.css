@@ -233,7 +233,7 @@ text-rendering: optimizeSpeed;
     background-image: url(../assets/images/hero_img.png);
     background-size: 107%;
     background-position: center;
-    border-bottom: 10px solid;
+    border-bottom: 12px solid #2d44ed;
     border-left: 6px solid;
 }
 

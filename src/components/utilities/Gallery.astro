@@ -3,13 +3,57 @@
         <button class="gallery__btn gallery__btn--left" />
         <button class="gallery__btn gallery__btn--right" />
     </div> -->
-        <button class="gallery__btn gallery__btn--left" />
+    <button class="gallery__btn gallery__btn--left" />
     <div class="gallery__inner">
         <div class="gallery__flex">
             <slot />
         </div>
     </div>
-        <button class="gallery__btn gallery__btn--right" />
+    <button class="gallery__btn gallery__btn--right" />
 </div>
 
 <script src="../../scripts/gallery.js"></script>
+
+<style>
+    .gallery {
+        max-width: 100vw;
+        display: flex;
+        align-items: center;
+    }
+
+    .gallery__btn {
+        display: block;
+        width: 2.5rem;
+        height: 2.5rem;
+        background-color: transparent;
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        border: none;
+        border-radius: 50%;
+        /* display: none; */
+    }
+
+    .gallery__btn--left {
+        background-image: url(../../assets/icons/arrow_left.svg);
+    }
+
+    .gallery__btn--right {
+        background-image: url(../../assets/icons/arrow_right.svg);
+    }
+
+    .gallery__inner {
+        flex: 1;
+        max-width: calc(100% - 5rem);
+        overflow-x: auto;
+    }
+
+    .gallery__flex {
+        margin: 0 auto;
+        width: max-content;
+        display: flex;
+        align-items: center;
+    }
+
+
+</style>
