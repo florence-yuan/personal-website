@@ -122,7 +122,7 @@ function textAnim() {
     });
     gsap.from(animLines.chars, {xPercent: -100, stagger: 0.03, delay: 0.15, duration: 0.4, ease: "power1.inOut"})
 
-    const featuredLines = SplitText.create(".banner__featured > li > a", {
+    const featuredLines = SplitText.create(".banner__featured li > a", {
         type: "lines",
         mask: "lines",
         linesClass: "line++"

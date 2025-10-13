@@ -115,21 +115,19 @@ text-rendering: optimizeSpeed;
 }
  
 .banner__featured h2 {
-    margin-bottom: 1em;
+    margin-bottom: .8em;
+    font-size: calc(1rem + .4vw);
     text-transform: uppercase;
     letter-spacing: 0.2em;
     transform: translateX(5px);
 }
 
-.banner__featured li {
+.featured__links li {
     list-style: none;
+    margin-bottom: .8em;
 }
 
-.banner__featured li + li {
-    margin-top: 1em;
-}
-
-.banner__featured a {
+.featured__links a {
     display: block;
 }
 
@@ -145,10 +143,10 @@ text-rendering: optimizeSpeed;
     }
 }
 
-.banner__featured a .line-mask {
+.featured__links a .line-mask {
     display: block;
     width: max-content;
-    font-size: 2.5rem;
+    font-size: calc(1.3rem + 1vw);
     font-family: 'Belarus', serif;
     text-transform: uppercase;
     text-align: justify;
@@ -169,7 +167,7 @@ text-rendering: optimizeSpeed;
     --bg: #2d44ed;
 } */
 
-.banner__featured a:hover .line {
+.featured__links a:hover .line {
     text-decoration: 2px underline;
 }
 

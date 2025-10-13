@@ -7,6 +7,7 @@ import Gallery from "../components/utilities/Gallery.astro";
 const artworks = Object.values(import.meta.glob<{ default: ImageMetadata }>('/src/assets/images/artworks/*.jpg'));
 const graphics = Object.values(import.meta.glob<{ default: ImageMetadata }>('/src/assets/images/artworks/graphics/*.svg'));
 const portraits = Object.values(import.meta.glob<{ default: ImageMetadata }>('/src/assets/images/artworks/graphics2/*.svg'));
+const pottery = Object.values(import.meta.glob<{ default: ImageMetadata }>('/src/assets/images/artworks/pottery/*'));
 ---
 
 <BaseLayout pageTitle='Artworks'>
@@ -24,6 +25,18 @@ const portraits = Object.values(import.meta.glob<{ default: ImageMetadata }>('/s
 				)}
 			</Gallery>
 			<p class="">Dichromatic graphic art covers for a magazine release</p>
+		</section>
+		<section class="pot-section">
+			<Gallery>
+				{pottery.map(artwork =>
+					<Image
+						src={artwork()}
+						alt="loading"
+						class="gallery__work"
+					/>
+				)}
+			</Gallery>
+			<p class="">Pottery fragments</p>
 		</section>
 		<section>
 			<Gallery>
