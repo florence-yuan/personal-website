@@ -2,21 +2,33 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import PostList from "../components/utilities/PostList.astro";
 
-const pageTitle = 'Blog';
+const pageTitle = 'Fiction';
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-	<section class="section--blog">
+	<section>
 		<h1 class="section__title title--no-break">
 			The Curiosity Shop
 		</h1>
-		<p>Selected short stories, poems, and plays.</p>
+		<p>Selected short stories, poems, and plays. (Upload in progress)</p>
 	
 		<PostList category="fiction"/>
 	</section>
 </BaseLayout>
 
 <style>
+	section {
+		padding-top: 5rem;
+		background-image: url(../assets/images/person_writing.png);
+		background-size: 30%;
+		background-repeat: no-repeat;
+		background-position: right top;
+	}
+
+	h1 {
+		font-size: 6rem;
+	}
+
 	.section--blog .section__title {
 		font-size: 5rem;
 		margin-top: 2rem;
