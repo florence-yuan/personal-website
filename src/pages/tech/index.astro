@@ -144,6 +144,8 @@ const projects = [
 
 	.project {
 		list-style: none;
+		width: max-content;
+		max-width: 100%;
 	}
 
 	.project + .project {
@@ -154,6 +156,7 @@ const projects = [
 		font-size: 2.2rem;
 		font-family: "Belarus";
 		text-transform: uppercase;
+		width: max-content;
 	}
 
 	.proj__link:hover .proj__title {
@@ -162,19 +165,23 @@ const projects = [
 	}
 
 	.project--featured {
-		padding-bottom: 3em;
 		border-bottom: 1px solid;
-		margin-bottom: 4em;
+		margin-bottom: 3.5em;
+	}
+
+	.project--featured .proj__link {
+		display: block;
+		padding-bottom: 2em;
 	}
 
 	.proj__img {
+		display: block;
 		max-width: 100%;
 		height: auto;
-		margin-bottom: 1em;
 	}
 
 	.proj__desc {
-		margin-top: .6em;
+		padding-top: .6em;
 		line-height: 1.6;
 	}
 </style>
