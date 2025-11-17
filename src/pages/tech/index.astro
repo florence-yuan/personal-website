@@ -1,34 +1,87 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
-import FeaturedProjects from "../../components/index/FeaturedProjects.astro";
+import FeaturedImg from "../../assets/images/projects/collage_book_img.png";
+import Image from "astro/components/Image.astro";
+// import FeaturedProjects from "../../components/index/FeaturedProjects.astro";
 
-const featured = [
-	{ label: "Virtual piano and recorder", link: "https://florence-yuan.github.io/virtual-instrument/" },
-	{ label: "Classical music", link: "https://github.com/florence-yuan/instrument_classifier" },
-	{ label: "Infinity Hotel concept game", link: "https://florence-yuan.github.io/spider-game/" },
-	{ label: "Random crossword", link: "https://florence-yuan.github.io/fill-in-puzzle/" },
-	{ label: "Classic chess", link: "https://florence-yuan.github.io/react-chess-app/" },
-	{ label: "Falling squares game", link: "https://florence-yuan.github.io/square-game/" },
-	{ label: "A community through time", link: "#" },
+const projects = [
+	{
+		label: "A Flagrant Myth - a hypertext collage book",
+		link: "https://florence-yuan.github.io/virtual-instrument/",
+		featured: true,
+		img: FeaturedImg,
+		description:
+			"Inspired by Max Ernst's 1929 work The Hundred Headless Woman. \nEach collage is made by digitally combining vintage prints with actual photos. \nBetween the demolition of old neighborhoods and the mysterious appearance of half-goat, half-human creatures, the line between reason and disorder begins to blur... A story about change and memory.",
+	},
+	{
+		label: "Virtual piano and recorder",
+		link: "https://florence-yuan.github.io/virtual-instrument/",
+	},
+	{
+		label: "Classical music",
+		link: "https://github.com/florence-yuan/instrument_classifier",
+	},
+	{
+		label: "Infinity Hotel concept game",
+		link: "https://florence-yuan.github.io/spider-game/",
+	},
+	{
+		label: "Random crossword",
+		link: "https://florence-yuan.github.io/fill-in-puzzle/",
+	},
+	{
+		label: "Classic chess",
+		link: "https://florence-yuan.github.io/react-chess-app/",
+	},
+	{
+		label: "Falling squares game",
+		link: "https://florence-yuan.github.io/square-game/",
+	},
 	{ label: "Wizard of Oz concept game", link: "#" },
 	{ label: "Hypertext story", link: "#" },
-]
+];
 ---
 
-<BaseLayout pageTitle='Tech'>
+<BaseLayout pageTitle="Tech">
 	<div class="flex">
 		<div class="article__fig">
 			<!-- <div class="article__svg" /> -->
 		</div>
 		<article>
 			<h1>Tech, web-dev & multimedia</h1>
-			<ul class="featured-projs">
-				{featured.map(({label, link}) => (
-					<li class="featured__proj">
-						<a class="proj__link link--no-underline" href={link}>{label}</a>
-					</li>
-				))}
-			</div>
+			<ul class="projects">
+				{
+					projects.map(({ label, link, featured, img, description }) =>
+						!featured ? (
+							<li class="project">
+								<a
+									class="proj__link link--no-underline"
+									href={link}
+								>
+									<p class="proj__title">
+										{label}
+									</p>
+								</a>
+							</li>
+						) : (
+							<li class="project project--featured">
+								<a
+									class="proj__link link--no-underline"
+									href={link}
+								>
+									<Image
+										src={img}
+										alt=""
+										class="proj__img"
+									/>
+									<p class="proj__title">{label}</p>
+									<p class="proj__desc">{description}</p>
+								</a>
+							</li>
+						),
+					)
+				}
+			</ul>
 		</article>
 	</div>
 </BaseLayout>
@@ -40,6 +93,12 @@ const featured = [
 		gap: calc(3rem + 3vw);
 		margin: 5rem auto;
 		justify-content: right;
+	}
+
+	@media (min-width: 1700px) {
+		.flex {
+			padding-right: 12vw;
+		}
 	}
 
 	article {
@@ -67,9 +126,9 @@ const featured = [
 		z-index: 0;
 	}
 
-	.article__fig:hover {
+/* 	.article__fig:hover {
 		background-image: url(../../assets/images/lamp_lit.png);
-	}
+	} */
 
 	.article__svg {
 		position: absolute;
@@ -83,19 +142,38 @@ const featured = [
 		background-repeat: no-repeat;
 	}
 
-	.featured__proj {
+	.project {
 		list-style: none;
+	}
+
+	.project + .project {
+		margin-top: 1.6em;
+	}
+
+	.proj__title {
 		font-size: 2.2rem;
-		font-family: 'Belarus';
+		font-family: "Belarus";
 		text-transform: uppercase;
 	}
 
-	.featured__proj + .featured__proj {
-		margin-top: .2em;
-	}
-
-	.proj__link:hover {
+	.proj__link:hover .proj__title {
 		text-decoration: 2px underline;
 		text-underline-offset: 5px;
+	}
+
+	.project--featured {
+		padding-bottom: 3em;
+		border-bottom: 1px solid;
+		margin-bottom: 4rem;
+	}
+
+	.proj__img {
+		max-width: 100%;
+		height: auto;
+		margin-bottom: 1em;
+	}
+
+	.proj__desc {
+		margin-top: .6em;
 	}
 </style>
