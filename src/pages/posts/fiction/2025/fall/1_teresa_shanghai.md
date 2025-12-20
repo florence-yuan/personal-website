@@ -3,7 +3,7 @@ layout: /src/layouts/MarkdownPostLayout.astro
 title: 'Teresa in Shanghai'
 pubDate: '15 Oct 2025'
 formattedDate: '2025-10-15'
-description: 'There is much to be said about martyrs, and just as much to be said about their eras. George Eliot evoked St Teresa through the character of Dorothea in "Middlemarch"; what if St Teresa was born instead in 20th century Shanghai?'
+description: 'There is much to be said about martyrs, and just as much to be said about the eras in which they lived (and died). George Eliot evoked Saint Teresa of Avila through the character of Dorothea in "Middlemarch"; what if Teresa was born instead in 20th century Shanghai?'
 author: 'Florence Yuan'
 image:
     url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Hugo_Charlemont_Aus_der_Wachau.jpg/960px-Hugo_Charlemont_Aus_der_Wachau.jpg'
