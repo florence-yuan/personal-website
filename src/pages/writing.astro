@@ -1,0 +1,30 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import PostList from "../components/utilities/PostList.astro";
+
+const pageTitle = "Writing Portfolio";
+---
+
+<BaseLayout pageTitle={pageTitle} hasBg={true}>
+	<section class="section--blog">
+		<h1 class="section__title">The Curiosity Shop</h1>
+		<p>My writing portfolio.</p>
+
+		<PostList category="all" />
+	</section>
+</BaseLayout>
+
+<style>
+	.section__title {
+		font-size: 6rem;
+		margin-top: 4rem;
+		margin-left: 6vw;
+	}
+
+	p {
+		margin-left: calc(6vw + 0.5em);
+		font-family: "Literata", serif;
+		font-size: 1.3rem;
+		font-weight: 300;
+	}
+</style>

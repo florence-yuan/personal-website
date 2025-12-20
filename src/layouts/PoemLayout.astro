@@ -3,9 +3,14 @@ import MarkdownPostLayout from './MarkdownPostLayout.astro';
 import '../styles/posts.css'
 
 const {frontmatter} = Astro.props;
+
+console.log(frontmatter)
 ---
 
 <MarkdownPostLayout frontmatter={frontmatter} hideTitle={true}>
+<!--     <p>
+        {frontmatter.}
+    </p> -->
     <pre class="poem">
         <slot />
     </pre>
