@@ -7,6 +7,7 @@ author: 'Florence Yuan'
 tags: ["short story", "breakage", "family", "coming of age"]
 category: "Fiction"
 description: "Evolution of an egg in a girl's coming of age."
+genre: "short story"
 ---
 
 Now that the crisis has passed, the whole thing seems to have unraveled itself until what remains of it is the barest of outlines, like the strings of gauze from an abandoned web that shimmers and fades in plain sight.  There is no help for it now; I cannot chase the thoughts from my mind, and all the thoughts keep going round in circles, the egg to the chicken, the chicken to the egg.  That’s right – eggs.  I can’t seem to recall exactly why I bought the eggs.  Possibly it had something to do with their roundness; the firm, supple, brown things sat fatly in dimpled cartons, exuding an air of comfort and luxury so sorely lacking in the surrounding stench of fish and the sound of the little plastic fans whirling busily overhead.  Possibly it was the old woman who hovered by my elbow, wearing an apron that smelled of clean cotton and strong soaps.  I was too embarrassed to look her full in the face, not more than a fleeting glance to know she was old and weathered with a tangled crop of lean black hair.  But I heard her voice; it was a sonorous chirp that carried over the confused whirl of electric fans, and I understood just enough of it to know she was trying to make me buy the eggs.

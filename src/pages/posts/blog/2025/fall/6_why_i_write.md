@@ -1,7 +1,8 @@
 ---
-layout: ../../../layouts/MarkdownPostLayout.astro
+layout: /src/layouts/MarkdownPostLayout.astro
 title: 'Why I Write'
-pubDate: '2025-09-30'
+pubDate: '30 Sep 2025'
+formattedDate: '2025-09-30'
 description: 'What Venus and Frankenstein have to do with us.  Or, an echo chamber of idolatry and contempt that I attempt to escape through writing.'
 author: 'Florence Yuan'
 

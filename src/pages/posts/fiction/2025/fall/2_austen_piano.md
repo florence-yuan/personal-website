@@ -29,9 +29,14 @@ For both Elizabeth Bennet and Emma Woodhouse, the piano is a social necessity, a
 
 Like other human inventions that become staples of polite society, what the piano represents is a combination of social rules and the personality of its practitioner. When the former overwhelms the latter, we are reminded of the disproportionate shackles society places on women, as in the case of Jane Fairfax. Yet when the character herself is in control, then ease and vivacity come to the fore, and unforgettably lively characters such as Emma and Elizabeth emerge. Through the musical abilities of her characters, Austen constructs a vivid world of diverse personalities. Love, too, is a consistent theme. The scene at the pianoforte precedes Darcy’s first proposal, and marks an important step in Elizabeth and Darcy’s mutual understanding. The theme of love is a more fragile, painful one in Emma, more easily misinterpreted and speaking to the tragic implications of being a genteel woman in poverty. For Jane and Frank, the piano is an emblem of forbidden love and suppressed desires, with the woman who plays at it powerless, and the instrument itself subject to the man’s whims. Ultimately, Austen’s novels do not rebel against class and hierarchy. As Vorachek notes, “…the piano provides authors and artists of the nineteenth century a means of representing female sexual desire without overturning, and in some cases even endorsing, middle-class constructions of women's sexuality” (Vorachek 39). Nevertheless, through Emma and especially through Elizabeth, Austen reminds us that our choices do define our lives, and the way her heroines choose to express themselves on the pianoforte indeed raises their voice, expressing values of autonomy, independence and true love that shine bright in spite of the constraints of 19th century English society.
 
+<hr />
 
-Works Cited
+_Works Cited_
+
 Austen, Jane. Emma. Little, Brown, 1892.
+
 Austen, Jane. Pride and Prejudice. Oxford University Press, 1974.
+
 Goodheart, Eugene. “Emma: Jane Austen’s Errant Heroine.” Sewanee Review, vol. 116, no. 4, Sept. 2008, pp. 589–604.
+
 Vorachek, Laura. “’The Instrument of the Century’: The Piano as an Icon of Female Sexuality in the Nineteenth Century.” George Eliot - George Henry Lewes Studies, no. 38/39, Sept. 2000, pp. 26-43.

@@ -1,7 +1,8 @@
 ---
-layout: ../../../layouts/MarkdownPostLayout.astro
+layout: /src/layouts/MarkdownPostLayout.astro
 title: 'Much Ado About Nothing on Rainy Days'
-pubDate: '2025-05-20'
+pubDate: '20 May 2025'
+formattedDate: '2025-05-20'
 description: Rainy days and the romanticization of idleness.
 author: 'Florence Yuan'
 image:

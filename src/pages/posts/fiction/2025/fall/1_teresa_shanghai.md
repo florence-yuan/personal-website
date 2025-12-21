@@ -12,7 +12,7 @@ image:
     embedUrl: https://commons.wikimedia.org/wiki/File:Hugo_Charlemont_Aus_der_Wachau.jpg
     domain: 'Public domain, via Wikimedia Commons'
 tags: ["fiction", "what-if", "surrealism"]
-genre: "short story"
+genre: "creative essay"
 ---
 
 I came upon Teresa’s story by chance, when a friend lent me an old newspaper with the headline “Counter-revolutionary disrupts public order”, accompanied by a blurry black-and-white photo of a young woman on a rooftop, holding up what appears to be a blank sheet of paper – though that might be owing to the temptation of drawing a connection to the recent “White Paper Protests” in Shanghai.  The strangeness of the woman’s stance intrigued me, and in my subsequent investigations I was struck by the parallels – and differences – between Teresa and her namesake, Saint Teresa of Avila, which drove me to assemble the brief biography below.

@@ -9,7 +9,9 @@ body {
     padding: 2rem 1rem;
 }
 
-.post__header, .post__body, .post__footer {
+.post__header,
+.post__body,
+.post__footer {
     width: 50rem;
     max-width: 100%;
     margin: 0 auto;
@@ -40,7 +42,7 @@ body {
     text-align: right;
 }
 
-.post__img-attr > a {
+.post__img-attr>a {
     color: inherit;
 }
 
@@ -66,7 +68,7 @@ body {
     font-weight: 300;
 }
 
-.post__body > p:first-child::first-letter {
+.post__body>p:first-child::first-letter {
     font-size: 5rem;
     line-height: 1;
     float: left;
@@ -74,9 +76,14 @@ body {
     margin-right: 0.1em;
 }
 
-.post__body > p + p {
+.post__body>p+p {
     margin-top: 0.8em;
     /* text-indent: 0.5in; */
+}
+
+hr {
+    border-bottom: 1px solid;
+    margin: 2em 0;
 }
 
 /* Tags Styles */
@@ -93,17 +100,16 @@ body {
     padding: 1em 0;
 }
 
-.tags__label {}
+.tags__label {
+    font-family: 'Literata', ser;
+    font-size: 1.1rem;
+    margin-right: .5em;
+}
 
 .tag {
     text-transform: capitalize;
-    /* font-weight: bold;
-    font-family: "Antic Didone", serif; */
-    color: var(--dark-gray);
-    padding: 0.3em 0.8em 0.35em;
-    font-size: 0.9rem;
-    border: 1px solid var(--light-beige2);
-    border-radius: 30px;
+    padding: 0.35em 0.8em;
+    border: 2px solid black;
     transition: all 0.2s ease-in-out;
 }
 
@@ -112,7 +118,8 @@ body {
 }
 
 .tag:hover {
-    background-color: var(--light-beige2);
+    background-color: black;
+    color: white;
 }
 
 /* Poem */

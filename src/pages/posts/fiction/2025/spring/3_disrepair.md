@@ -6,6 +6,7 @@ formattedDate: '2025-03-14'
 author: 'Florence Yuan'
 tags: ["poetry", "dreams", "sad"]
 category: "Poetry"
+genre: "poem"
 ---
 
 # In Parallel

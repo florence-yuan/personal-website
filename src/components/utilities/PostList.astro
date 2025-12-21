@@ -9,12 +9,12 @@ switch (category) {
         posts = Object.values(import.meta.glob('../../pages/posts/fiction/*/*/*.md', { eager: true }));
         break;
     case 'blog':
-        posts = Object.values(import.meta.glob('../../pages/posts/blog/*.md', { eager: true }));
+        posts = Object.values(import.meta.glob('../../pages/posts/blog/*/*/*.md', { eager: true }));
         break;
     case 'all':
         posts = [
             ...Object.values(import.meta.glob('../../pages/posts/fiction/*/*/*.md', { eager: true })),
-            ...Object.values(import.meta.glob('../../pages/posts/blog/*.md', { eager: true }))
+            ...Object.values(import.meta.glob('../../pages/posts/blog/*/*/*.md', { eager: true }))
         ];
         break;
     default:
@@ -35,15 +35,12 @@ switch (category) {
 
 <style>
     .post-grid {
-    }
-
-    @media (min-width: 1024px) {
-        .post-grid {
-            margin-top: 3rem;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(35rem, 45rem));
-            justify-content: center;
-            gap: 2.5rem calc(2rem + 2vw);
-        }
+        max-width: 60rem;
+        margin-top: 4rem;
+		margin: 4rem auto;
+        /* 
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
+        justify-content: center; */
     }
 </style>

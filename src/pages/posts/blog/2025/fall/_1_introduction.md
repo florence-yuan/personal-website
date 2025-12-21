@@ -1,5 +1,5 @@
 ---
-layout: ../../../layouts/MarkdownPostLayout.astro
+layout: /src/layouts/MarkdownPostLayout.astro
 title: 'Introduction: Enigma'
 pubDate: '1 Jan 2025'
 formattedDate: '2025-01-01'

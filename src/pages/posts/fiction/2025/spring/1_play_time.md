@@ -7,6 +7,7 @@ description: '"All things fall into disrepair..."'
 author: 'Florence Yuan'
 tags: ["poetry", "childhood"]
 category: "Poetry"
+genre: "poem"
 ---
 
 # Play Time

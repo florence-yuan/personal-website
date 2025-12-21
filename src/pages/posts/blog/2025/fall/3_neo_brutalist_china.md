@@ -1,7 +1,8 @@
 ---
-layout: ../../../layouts/MarkdownPostLayout.astro
+layout: /src/layouts/MarkdownPostLayout.astro
 title: Hard Times | A Neo-Brutalist China
-pubDate: '2025-03-15'
+pubDate: 'Mar 15 2025'
+formattedDate: '2025-03-15'
 description: On a trip to one of those obscure museums in a coastal city, I was dimly aware of a new form of Brutalism and an old form of art. But was one better than the other?
 author: 'Florence Yuan'
 tags: ["personal", "blogging", "art"]

@@ -6,6 +6,7 @@ formattedDate: '2025-03-03'
 author: 'Florence Yuan'
 tags: ["poetry", "childhood"]
 category: "Poetry"
+genre: "poem"
 ---
 
 # A Little Girl

@@ -1,7 +1,8 @@
 ---
-layout: ../../../layouts/MarkdownPostLayout.astro
+layout: /src/layouts/MarkdownPostLayout.astro
 title: 'Thoughts on Distractions'
-pubDate: '2025-07-10'
+pubDate: '10 July 2025'
+formattedDate: '2025-07-10'
 description: 'Many have declared distractions to be the bane of not only productivity, but also equality. But have we been overlooking the great majority of distractions in favor of the few? Note: this essay is just some personal reflections on distractions, and how social attitudes have impaired our intellectual lives.'
 author: 'Florence Yuan'
 image:

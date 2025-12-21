@@ -3,7 +3,7 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 import PostTextCard from "../../components/utilities/PostTextCard.astro";
 
 export async function getStaticPaths() {
-    const allPosts = Object.values(import.meta.glob('../posts/*/*.md', { eager: true }));
+    const allPosts = Object.values(import.meta.glob('../posts/*/*/*/*.md', { eager: true }));
     const uniqueTags = [...new Set(allPosts.map((post : any) => post.frontmatter.tags).flat())];
 
     return uniqueTags.map((tag : string) => {
@@ -19,7 +19,7 @@ const { posts } = Astro.props;
 ---
 
 <BaseLayout pageTitle={tag}>
-    <div class="tag-page">
+    <article class="tag-page">
         <h1>Posts tagged with {tag}</h1>
         <ul>
             {posts.map((post : any) => (
@@ -29,5 +29,11 @@ const { posts } = Astro.props;
                 />
             ))}
         </ul>
-    </div>
+    </article>
 </BaseLayout>
+
+<style>
+    h1 {
+        font-size: 4rem;
+    }
+</style>

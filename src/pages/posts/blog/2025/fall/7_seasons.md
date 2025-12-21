@@ -1,8 +1,9 @@
 ---
-layout: ../../../layouts/MarkdownPostLayout.astro
+layout: /src/layouts/MarkdownPostLayout.astro
 title: 'Sentimental Seasons'
 additional: Reasons?
-pubDate: '2025-10-10'
+pubDate: '10 Oct 2025'
+formattedDate: '2025-10-10'
 description: 'January hit like a truck, May a call to arms, sleepy September like a dandelion, but what next?'
 author: 'Florence Yuan'
 

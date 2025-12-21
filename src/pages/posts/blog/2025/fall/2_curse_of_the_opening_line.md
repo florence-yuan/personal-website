@@ -1,7 +1,8 @@
 ---
-layout: ../../../layouts/MarkdownPostLayout.astro
+layout: /src/layouts/MarkdownPostLayout.astro
 title: 'The Curse of the Opening Line'
-pubDate: '2025-02-12'
+pubDate: '12 Feb 2025'
+formattedDate: '2025-02-12'
 description: 'Why do novelists delay their darling projects, and, god forbid, abandon them? As a serial offender of both categories, I (attempt to) lay out my case.'
 author: 'Florence Yuan'
 image:

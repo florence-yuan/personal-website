@@ -7,6 +7,7 @@ author: 'Florence Yuan'
 tags: ["short story", "violence", "virtual reality"]
 category: "Fiction"
 description: "A desperate man tries a different kind of therapy."
+genre: "short story"
 ---
 
 The rubber man swayed softly at the other end of the attic, its arms outstretched, stretched too wide for an embrace.  Stephen stared at it, bile rising in his throat.  Its whitish, amorphous visage faced him indifferently, soft and impalpable and featureless, looming now and then as it tilted backward and forward and was thrown into the light.
