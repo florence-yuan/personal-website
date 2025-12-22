@@ -86,7 +86,7 @@ text-rendering: optimizeSpeed;
 
 .hero__fig {
     position: relative;
-    max-width: 40rem;
+    max-width: 43rem;
     width: max-content;
     padding-right: 2rem;
     aspect-ratio: 2 / 1;
@@ -107,11 +107,12 @@ text-rendering: optimizeSpeed;
 .landing__banner {
     display: flex;
     gap: 3rem;
+    justify-content: space-between;
     align-items: flex-end;
 }
  
 .banner__featured {
-    width: 25rem;
+    width: 35rem;
 }
  
 .banner__featured h2 {
