@@ -4,6 +4,7 @@ title: 'In Parallel'
 pubDate: '14 Mar 2025'
 formattedDate: '2025-03-14'
 author: 'Florence Yuan'
+description: '"We meet rain with our skin and nothing else"'
 tags: ["poetry", "dreams", "sad"]
 category: "Poetry"
 genre: "poem"

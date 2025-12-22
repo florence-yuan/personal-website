@@ -11,7 +11,7 @@ image:
     creator: Hugo Charlemont
     embedUrl: https://commons.wikimedia.org/wiki/File:Hugo_Charlemont_Aus_der_Wachau.jpg
     domain: 'Public domain, via Wikimedia Commons'
-tags: ["fiction", "surrealism", "coming of age"]
+tags: ["short story", "surrealism", "coming of age"]
 genre: "short story"
 ---
 

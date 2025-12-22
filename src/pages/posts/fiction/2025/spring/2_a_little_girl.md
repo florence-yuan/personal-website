@@ -3,40 +3,35 @@ layout: /src/layouts/PoemLayout.astro
 title: 'A Little Girl'
 pubDate: '3 Mar 2025'
 formattedDate: '2025-03-03'
+description: '"A little girl is like clay..."'
 author: 'Florence Yuan'
-tags: ["poetry", "childhood"]
+tags: ["poetry", "childhood", "art"]
 category: "Poetry"
 genre: "poem"
 ---
 
 # A Little Girl
 
-All things fall into disrepair
-A misshapen river flows under our feet where
-we used to whisper about the day that spread
-above us like honeysuckles and lilies
+A little girl is like clay.
+You mold her by your fingers.
+You say you do not care if she is pretty or bright,
+but your fingers say otherwise.
 
-You used to say that play was a long
-preamble for more glorious chapters of life
-The first cymbals and brass before
-Sunrise shatters the world
+Why should you lie?
+You enter a gallery. The second floor that
+No one visits. You contemplate the pictures
+that line its walls, and exclaim, oh, how dull!
+How incapable of light and beauty!
+This is an art that repels me!
 
-You and I, we are in that mellow world, too,
-I said, and I should like this to last forever
-When we are twelve, twenty-two, one hundred,
-I hope we still push each other on swings
+You return.
+You mold the little girl by your fingers.
+You sculpt her eyes,
+her lashes, her nose, her ears.
+You taper her waist till she nearly breaks.
+You pinch her stomach. She is a vase without flowers.
 
-Swinging to the sun and rain and river of flowers
-that bind our bodies to shadows tall, and then,
-no sunrise to shatter this world, and then,
-no glory I do not desire with my body and my shadow tall
-
-Free fall
-I sense its decrepitude, like a worm that has burrowed
-Deep into the fabric of that glorious day
-its pure blue now tainted and bitten through
-
-The worm. Something snub nosed and ungenerous
-lurking in a cave too ancient to illuminate
-I call to you, but receive nothing
-beyond that distant echo
+Now she is Art, and you are Artist.
+You sell her to the merchants offering flowers.
+She is a little girl, but do you remember still?
+Your fingers rest on clay.

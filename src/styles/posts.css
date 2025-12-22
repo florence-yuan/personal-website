@@ -109,8 +109,7 @@ hr {
 .tag {
     text-transform: capitalize;
     padding: 0.35em 0.8em;
-    border: 2px solid black;
-    transition: all 0.2s ease-in-out;
+    border: 1px solid black;
 }
 
 .tag::before {

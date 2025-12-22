@@ -5,7 +5,7 @@ pubDate: '20 Jan 2025'
 formattedDate: '2025-01-20'
 description: 'Eliza faces a test of will in a poetry contest.'
 author: 'Florence Yuan'
-tags: ["fiction", "fear", "coming of age", "regret"]
+tags: ["short story", "fear", "coming of age", "regret"]
 genre: "short story"
 ---
 

@@ -1,6 +1,6 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import FeaturedPosts from "../components/index/FeaturedPosts.astro";
+import PostList from "../components/utilities/PostList.astro";
 ---
 
 <BaseLayout pageTitle='Writing'>
@@ -17,7 +17,7 @@ import FeaturedPosts from "../components/index/FeaturedPosts.astro";
 			but there's a charm to it, I think. My (very much still in-progress) fiction archive is available
 			<a href="/fiction">here</a>.
 		</p>
-		<FeaturedPosts />
+		<PostList category="blog"/>
 	</article>
 </BaseLayout>
 

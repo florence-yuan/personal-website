@@ -15,9 +15,14 @@ const pageTitle = "Writing Portfolio";
 </BaseLayout>
 
 <style>
-	body::before {
+	body::before,
+	body::after {
 		content: "";
 		position: fixed;
+	}
+	body::before {
+		/* content: "";
+		position: fixed; */
 		top: -10rem;
 		left: -5rem;
 		width: calc(100% + 10rem);
@@ -25,6 +30,23 @@ const pageTitle = "Writing Portfolio";
 		height: 100%;
 		background-image:
 			radial-gradient(circle at 15% 12%, rgba(255, 0, 0, 0.55) 3rem, transparent 70rem),
+			url(../assets/images/noise.svg)
+			;
+		background-size: 100%, 20%;
+		filter: brightness(2) contrast(2);
+		mix-blend-mode: screen;
+		/* filter: blur(50px); */
+		z-index: -1;
+	}
+
+	body::after {
+		top: 0rem;
+		left: 0rem;
+		width: calc(100% + 10rem);
+		max-width: 100rem;
+		height: 100%;
+		background-image:
+			radial-gradient(circle at 30% 30%, rgba(0, 60, 255, 0.55) 3rem, transparent 30rem),
 			url(../assets/images/noise.svg)
 			;
 		background-size: 100%, 20%;

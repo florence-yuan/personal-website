@@ -20,7 +20,7 @@ const { posts } = Astro.props;
 
 <BaseLayout pageTitle={tag}>
     <article class="tag-page">
-        <h1>Posts tagged with {tag}</h1>
+        <h1>Posts tagged with "{tag}"</h1>
         <ul>
             {posts.map((post : any) => (
                 <PostTextCard
@@ -34,6 +34,10 @@ const { posts } = Astro.props;
 
 <style>
     h1 {
-        font-size: 4rem;
+        font-size: 3rem;
+        font-family: 'Literata', serif;
+        font-weight: normal;
+        margin-bottom: 1em;
+        color: gray;
     }
 </style>
