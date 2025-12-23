@@ -1,0 +1,50 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout pageTitle="Writing">
+	<article>
+		<h1>Research papers</h1>
+		<p class="article__desc">An incomplete archive of my papers.</p>
+		<div class="article__links">
+			<div>
+				<div class="link__tag tag">Music</div>
+				<a
+					href="https://docs.google.com/document/d/14iLg4Nkbzs3rocCrJhp6VwzdgEd8DG8cKOMerEkq9Nk/edit?usp=sharing"
+				>
+					Multilabel Instrument Classification for Classical Music
+					with Convolutional Neural Networks
+				</a>
+			</div>
+			<div>
+				<div class="link__tag tag">Human factors</div>
+				<a
+					href="https://docs.google.com/document/d/1KNtsqqD_77s1jtq4QWS7yX-f1WTjQc0wrF-O-1bRZKQ/edit?usp=sharing"
+				>
+					Analyzing Profile Emotion Extraction for Driver Distraction
+					Classification
+				</a>
+			</div>
+		</div>
+	</article>
+</BaseLayout>
+
+<style>
+	.article__links a {
+		font-size: 1.2em;
+	}
+
+	.article__links > div + div {
+		margin-top: 3em;
+	}
+
+	.link__tag {
+		display: block;
+		width: max-content;
+		text-transform: uppercase;
+		padding: 4px 8px;
+		border: 1px solid;
+		margin-bottom: 1em;
+		font-size: 0.9em;
+	}
+</style>
