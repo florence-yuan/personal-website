@@ -214,9 +214,17 @@ text-rendering: optimizeSpeed;
 
 .hero__intro {
     margin: 4rem auto 3rem;
-    display: flex;
+    border-bottom: 1px solid;
+    /* display: flex;
     gap: calc(3rem + 3vw);
-    justify-content: center;
+    justify-content: center; */
+}
+
+.hero__intro > h2 {
+    font-family: 'Graphik Regular';
+    font-weight: normal;
+    font-size: 1rem;
+    text-transform: uppercase;
 }
 
 .intro__left {
@@ -283,4 +291,31 @@ text-rendering: optimizeSpeed;
 
 .featured-posts .link--btn {
     margin-top: 3rem;
+}
+
+.poem-flex {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 1rem;
+}
+
+.poem-pic {
+    width: 30rem;
+    height: 35rem;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.poem-pic:nth-child(1) {
+    background-image: url(../assets/images/calligrammes/white1.png);
+}
+
+.poem-pic:nth-child(2) {
+    background-image: url(../assets/images/calligrammes/white2.png);
+}
+
+.poem-pic:nth-child(3) {
+    background-image: url(../assets/images/calligrammes/white3.png);
 }

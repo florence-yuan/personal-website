@@ -1,0 +1,48 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { Image } from "astro:assets";
+
+// const idToDescription = {
+//     [id]: [desc]
+// };
+
+export async function getStaticPaths() {
+    // const allImgs = Object.values(import.meta.glob('../../assets/images/calligrammes/*.png', { eager: true }));
+    const allImgs = Object.entries(import.meta.glob<{ default: ImageMetadata }>('/src/assets/images/calligrammes/*.png'));
+
+    return allImgs.map(([path, src]) => ({
+        params: { id: path.split('/')[path.split('/').length - 1].split('.')[0] },
+        props: { img: src }
+    }));
+}
+
+const imgTitle = Astro.params.id;
+const { img } = Astro.props;
+---
+
+<BaseLayout pageTitle={imgTitle}>
+    <article class="tag-page">
+        <h1>{imgTitle}</h1>
+        <Image src={img()} alt="" class="enlarged-img"></Image>
+    </article>
+</BaseLayout>
+
+<style>
+    article {
+        position: relative;
+    }
+
+    h1 {
+        font-family: 'Graphik Regular';
+        font-size: 1rem;
+        font-weight: normal;
+        position: relative;
+        z-index: 100;
+    }
+
+    .enlarged-img {
+        max-width: 100%;
+        height: auto;
+        margin-top: -30%;
+    }
+</style>
