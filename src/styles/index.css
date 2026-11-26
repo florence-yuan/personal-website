@@ -269,6 +269,36 @@ text-rendering: optimizeSpeed;
     background-repeat: no-repeat;
 }
 
+.project-flex {
+    display: flex;
+    justify-content: space-around;
+    gap: 2rem;
+    margin: 3rem 0 4rem;
+}
+
+.project-pic {
+    width: 30rem;
+    height: 25rem;
+    background-position: center;
+    background-size: contain;
+}
+
+.project-pic:nth-child(1) {
+    background-image: url(../assets/images/hero/symphony_cover.png);
+    filter: saturate(2);
+}
+
+.project-pic:nth-child(2) {
+    background-image: url(../assets/images/hero/hypertext_cover.png);
+}
+
+.project-pic:nth-child(3) {
+    background-image:     url(../assets/images/noise.png),
+    url(../assets/images/hero/visual_poetry_cover.png);
+    background-size: 30%, 120%;
+    background-repeat: repeat, no-repeat;
+}
+
 /* Intro Section */
 
 .section--side {
