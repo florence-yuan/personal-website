@@ -8,7 +8,7 @@ import { Image } from "astro:assets";
 
 export async function getStaticPaths() {
     // const allImgs = Object.values(import.meta.glob('../../assets/images/calligrammes/*.png', { eager: true }));
-    const allImgs = Object.entries(import.meta.glob<{ default: ImageMetadata }>('/src/assets/images/calligrammes/*.png'));
+    const allImgs = Object.entries(import.meta.glob<{ default: ImageMetadata }>('/src/assets/images/enlargeables/*.png'));
 
     return allImgs.map(([path, src]) => ({
         params: { id: path.split('/')[path.split('/').length - 1].split('.')[0] },
@@ -43,6 +43,5 @@ const { img } = Astro.props;
     .enlarged-img {
         max-width: 100%;
         height: auto;
-        margin-top: -30%;
     }
 </style>

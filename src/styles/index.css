@@ -328,12 +328,21 @@ text-rendering: optimizeSpeed;
     display: flex;
     justify-content: space-evenly;
     gap: 1rem;
+    margin: 2rem 0;
+}
+
+.link-card {
+    border-bottom: none;
+}
+
+.link-card::after {
+    display: none;
 }
 
 .poem-pic {
     width: 30rem;
     height: 35rem;
-    background-size: contain;
+    background-size: 90%;
     background-repeat: no-repeat;
     background-position: center;
 }
@@ -348,4 +357,5 @@ text-rendering: optimizeSpeed;
 
 .poem-pic:nth-child(3) {
     background-image: url(../assets/images/calligrammes/white3.png);
+    background-size: 80%;
 }
